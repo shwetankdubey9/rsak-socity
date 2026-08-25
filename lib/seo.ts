@@ -9,6 +9,7 @@ export const siteConfig = {
   director: "Rakhi Shukla",
   expert: "Anil Kumar Shukla (MSc Agriculture, PG Diploma ISRO)",
   address: "630/A-1 K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003",
+  registeredOffice: "Railway Station Kurhand, Banda, Uttar Pradesh 210120",
   phone: "+91-9307909728",
   phoneAlt: "+91-9450154335",
   email: "societyrakhi@gmail.com",

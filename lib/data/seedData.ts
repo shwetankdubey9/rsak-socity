@@ -227,6 +227,30 @@ export const initialServices: ServiceItem[] = [
   },
 ];
 
+export const gisMappingOfferings = [
+  "GIS Mapping",
+  "3D Model Mapping",
+  "Contour Mapping",
+  "Drainage Mapping",
+  "Slope Mapping",
+  "Land Use & Land Cover Mapping",
+  "Proposed Plan Mapping",
+  "Canal Mapping",
+  "Road Mapping",
+  "Topography Mapping",
+  "Geological Mapping",
+  "Micro-watershed Mapping",
+  "Groundwater Mapping",
+  "Cadastral Mapping",
+  "Micro-irrigation Survey & Planning",
+  "GIS Data Acquisition",
+  "GIS Data Processing",
+  "Drone Survey",
+  "Aerial Inspection & Survey",
+  "Digital Elevation Model (DEM)",
+  "Digital Terrain Model (DTM)",
+];
+
 export const initialBlogs: BlogPost[] = [
   {
     id: "blog-1",
@@ -324,7 +348,7 @@ export const initialGallery: GalleryItem[] = [
     title: "Director Rakhi Shukla & Executive Leadership",
     description: "Program Director Rakhi Shukla guiding agricultural awareness and rural empowerment programs.",
     category: "Events",
-    imageUrl: "https://res.cloudinary.com/sb6zkuxk/image/upload/v1786302634/WhatsApp_Image_2026-08-02_at_14.29.22.jpg",
+    imageUrl: "https://res.cloudinary.com/sb6zkuxk/image/upload/v1786370945/rakhi_director.png",
     location: "RSAK Headquarters Jhansi",
     date: "2026",
     isFeatured: true,

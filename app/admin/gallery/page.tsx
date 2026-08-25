@@ -1,17 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { initialGallery } from "@/lib/data/seedData";
 import { GalleryItem } from "@/types";
 import { Plus, Trash2, Edit, Upload, Check, X, Image as ImageIcon } from "lucide-react";
 import { uploadToCloudinary } from "@/lib/cloudinary";
+import { createClient } from "@/lib/supabase/client";
+import { galleryFromRow, galleryToRow } from "@/lib/gallery";
 
 export default function AdminGalleryPage() {
   const [items, setItems] = useState<GalleryItem[]>(initialGallery);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<GalleryItem | null>(null);
   const [isUploading, setIsUploading] = useState(false);
+
+  useEffect(() => {
+    const loadGallery = async () => {
+      const { data } = await createClient().from("gallery").select("*").order("created_at", { ascending: false });
+      if (data?.length) setItems(data.map(galleryFromRow));
+    };
+    void loadGallery();
+  }, []);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -37,23 +47,27 @@ export default function AdminGalleryPage() {
     }
   };
 
-  const handleSave = (e: React.FormEvent) => {
+  const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
+    const draft: Omit<GalleryItem, "id"> = { ...formData, isFeatured: editingItem?.isFeatured || false };
+    const supabase = createClient();
     if (editingItem) {
-      setItems(items.map((it) => (it.id === editingItem.id ? { ...it, ...formData } : it)));
+      const { data, error } = await supabase.from("gallery").update(galleryToRow(draft)).eq("id", editingItem.id).select().single();
+      if (error) return alert("Unable to save in Supabase. Sign in with a Supabase admin account first.");
+      setItems(items.map((it) => (it.id === editingItem.id ? galleryFromRow(data) : it)));
     } else {
-      const newItem: GalleryItem = {
-        id: `gal-${Date.now()}`,
-        ...formData,
-      };
-      setItems([newItem, ...items]);
+      const { data, error } = await supabase.from("gallery").insert(galleryToRow(draft)).select().single();
+      if (error) return alert("Unable to save in Supabase. Sign in with a Supabase admin account first.");
+      setItems([galleryFromRow(data), ...items]);
     }
     setIsModalOpen(false);
     setEditingItem(null);
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = async (id: string) => {
     if (confirm("Are you sure you want to delete this gallery item?")) {
+      const { error } = await createClient().from("gallery").delete().eq("id", id);
+      if (error) return alert("Unable to delete from Supabase.");
       setItems(items.filter((it) => it.id !== id));
     }
   };

@@ -2,12 +2,16 @@ import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { initialBlogs } from "@/lib/data/seedData";
+import { blogFromRow } from "@/lib/blogs";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { constructMetadata } from "@/lib/seo";
 import { Calendar, Clock, User, ArrowLeft, Share2, Compass, Tag } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const blog = initialBlogs.find((b) => b.slug === slug);
+  const supabase = await createServerSupabaseClient();
+  const { data } = await supabase.from("blogs").select("*").eq("slug", slug).eq("is_published", true).maybeSingle();
+  const blog = data ? blogFromRow(data) : initialBlogs.find((b) => b.slug === slug);
   if (!blog) return constructMetadata({ title: "Article Not Found" });
 
   return constructMetadata({
@@ -18,7 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const blog = initialBlogs.find((b) => b.slug === slug);
+  const supabase = await createServerSupabaseClient();
+  const { data } = await supabase.from("blogs").select("*").eq("slug", slug).eq("is_published", true).maybeSingle();
+  const blog = data ? blogFromRow(data) : initialBlogs.find((b) => b.slug === slug);
 
   if (!blog) {
     notFound();

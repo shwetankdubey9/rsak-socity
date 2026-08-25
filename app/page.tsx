@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Compass,
   MapPin,
@@ -115,12 +114,12 @@ export default function HomePage() {
 
       {/* GIS MAPPING IN JHANSI 3D SHOWCASE */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-pink-500/10 px-3 py-1 text-xs font-semibold text-pink-500">
             <Building2 className="h-3.5 w-3.5" />
             <span>Interactive Spatial Feature</span>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900 dark:text-white">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             GIS Mapping in Jhansi District
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-300">

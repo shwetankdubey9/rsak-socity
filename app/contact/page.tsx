@@ -84,6 +84,18 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
+                  <div className="h-9 w-9 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white">Registered Office</h3>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-0.5">
+                      {siteConfig.registeredOffice}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
                   <div className="h-9 w-9 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5" />
                   </div>

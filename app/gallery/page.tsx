@@ -1,21 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { initialGallery } from "@/lib/data/seedData";
 import { GalleryItem } from "@/types";
+import { createClient } from "@/lib/supabase/client";
+import { galleryFromRow } from "@/lib/gallery";
 import { Compass, Maximize2, X, MapPin, Calendar } from "lucide-react";
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [activeLightbox, setActiveLightbox] = useState<GalleryItem | null>(null);
+  const [items, setItems] = useState<GalleryItem[]>(initialGallery);
+
+  useEffect(() => {
+    const loadGallery = async () => {
+      const { data } = await createClient().from("gallery").select("*").order("created_at", { ascending: false });
+      if (data?.length) setItems(data.map(galleryFromRow));
+    };
+    void loadGallery();
+  }, []);
 
   const categories = ["All", "GIS Elevation", "3D Mapping", "Field Work", "Soil Testing", "Events"];
 
   const filteredItems =
     activeCategory === "All"
-      ? initialGallery
-      : initialGallery.filter((item) => item.category === activeCategory);
+      ? items
+      : items.filter((item) => item.category === activeCategory);
 
   return (
     <div className="space-y-12 pb-20 pt-10">

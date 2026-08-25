@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { initialBlogs } from "@/lib/data/seedData";
+import { blogFromRow, blogToRow } from "@/lib/blogs";
+import { createClient } from "@/lib/supabase/client";
 import { BlogPost } from "@/types";
 import { Plus, Trash2, Edit, X, FileText, CheckCircle2 } from "lucide-react";
 
@@ -9,6 +11,14 @@ export default function AdminBlogsPage() {
   const [blogs, setBlogs] = useState<BlogPost[]>(initialBlogs);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingBlog, setEditingBlog] = useState<BlogPost | null>(null);
+
+  useEffect(() => {
+    const loadBlogs = async () => {
+      const { data } = await createClient().from("blogs").select("*").order("published_at", { ascending: false });
+      if (data?.length) setBlogs(data.map(blogFromRow));
+    };
+    void loadBlogs();
+  }, []);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -20,28 +30,32 @@ export default function AdminBlogsPage() {
     category: "GIS & Remote Sensing",
   });
 
-  const handleSave = (e: React.FormEvent) => {
+  const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
+    const draft: Omit<BlogPost, "id"> = {
+      tags: ["Jhansi", "GIS", "RSAK"], readTime: "5 min read",
+      publishedAt: editingBlog?.publishedAt || new Date().toISOString().split("T")[0],
+      imageUrl: editingBlog?.imageUrl || "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop",
+      isPublished: true, ...formData,
+    };
+    const supabase = createClient();
     if (editingBlog) {
-      setBlogs(blogs.map((b) => (b.id === editingBlog.id ? { ...b, ...formData } : b)));
+      const { data, error } = await supabase.from("blogs").update(blogToRow(draft)).eq("id", editingBlog.id).select().single();
+      if (error) return alert("Unable to save in Supabase. Sign in with a Supabase admin account first.");
+      setBlogs(blogs.map((b) => (b.id === editingBlog.id ? blogFromRow(data) : b)));
     } else {
-      const newBlog: BlogPost = {
-        id: `blog-${Date.now()}`,
-        tags: ["Jhansi", "GIS", "RSAK"],
-        readTime: "5 min read",
-        publishedAt: new Date().toISOString().split("T")[0],
-        imageUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop",
-        isPublished: true,
-        ...formData,
-      };
-      setBlogs([newBlog, ...blogs]);
+      const { data, error } = await supabase.from("blogs").insert(blogToRow(draft)).select().single();
+      if (error) return alert("Unable to publish to Supabase. Sign in with a Supabase admin account first.");
+      setBlogs([blogFromRow(data), ...blogs]);
     }
     setIsModalOpen(false);
     setEditingBlog(null);
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = async (id: string) => {
     if (confirm("Are you sure you want to delete this publication?")) {
+      const { error } = await createClient().from("blogs").delete().eq("id", id);
+      if (error) return alert("Unable to delete from Supabase.");
       setBlogs(blogs.filter((b) => b.id !== id));
     }
   };

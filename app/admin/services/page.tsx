@@ -1,14 +1,24 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { initialServices } from "@/lib/data/seedData";
 import { ServiceItem } from "@/types";
+import { createClient } from "@/lib/supabase/client";
+import { serviceFromRow, serviceToRow } from "@/lib/services";
 import { Plus, Trash2, Edit, X, Layers } from "lucide-react";
 
 export default function AdminServicesPage() {
   const [services, setServices] = useState<ServiceItem[]>(initialServices);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingService, setEditingService] = useState<ServiceItem | null>(null);
+
+  useEffect(() => {
+    const loadServices = async () => {
+      const { data } = await createClient().from("services").select("*").order("created_at", { ascending: false });
+      if (data?.length) setServices(data.map(serviceFromRow));
+    };
+    void loadServices();
+  }, []);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -18,26 +28,33 @@ export default function AdminServicesPage() {
     category: "GIS & Remote Sensing",
   });
 
-  const handleSave = (e: React.FormEvent) => {
+  const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
+    const draft: Omit<ServiceItem, "id"> = {
+      iconName: editingService?.iconName || "Map",
+      features: editingService?.features || ["DGPS Telemetry", "GIS Cadastral Delineation", "Technical DPR Preparation"],
+      imageUrl: editingService?.imageUrl || "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop",
+      isFeatured: editingService?.isFeatured || false,
+      ...formData,
+    };
+    const supabase = createClient();
     if (editingService) {
-      setServices(services.map((s) => (s.id === editingService.id ? { ...s, ...formData } : s)));
+      const { data, error } = await supabase.from("services").update(serviceToRow(draft)).eq("id", editingService.id).select().single();
+      if (error) return alert("Unable to save in Supabase. Sign in with a Supabase admin account first.");
+      setServices(services.map((s) => (s.id === editingService.id ? serviceFromRow(data) : s)));
     } else {
-      const newSrv: ServiceItem = {
-        id: `srv-${Date.now()}`,
-        iconName: "Map",
-        features: ["DGPS Telemetry", "GIS Cadastral Delineation", "Technical DPR Preparation"],
-        imageUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop",
-        ...formData,
-      };
-      setServices([newSrv, ...services]);
+      const { data, error } = await supabase.from("services").insert(serviceToRow(draft)).select().single();
+      if (error) return alert("Unable to save in Supabase. Sign in with a Supabase admin account first.");
+      setServices([serviceFromRow(data), ...services]);
     }
     setIsModalOpen(false);
     setEditingService(null);
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = async (id: string) => {
     if (confirm("Are you sure you want to delete this service entry?")) {
+      const { error } = await createClient().from("services").delete().eq("id", id);
+      if (error) return alert("Unable to delete from Supabase.");
       setServices(services.filter((s) => s.id !== id));
     }
   };

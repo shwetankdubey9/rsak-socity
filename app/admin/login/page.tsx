@@ -3,10 +3,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Compass, ShieldCheck, Lock, Mail, ArrowRight, CheckCircle2 } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
 
 export default function AdminLoginPage() {
-  const [email, setEmail] = useState("admin@rsak.org");
-  const [password, setPassword] = useState("admin123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
@@ -17,7 +18,13 @@ export default function AdminLoginPage() {
     setErrorMsg("");
 
     try {
-      // Set session cookie for admin protection
+      const { error } = await createClient().auth.signInWithPassword({ email, password });
+      if (error) {
+        setErrorMsg("Authentication failed. Please check credentials.");
+        return;
+      }
+
+      // Retained temporarily for the existing route middleware; Supabase owns the real session.
       document.cookie = `rsak_admin_session=true; path=/; max-age=${60 * 60 * 24 * 7}`;
       router.push("/admin");
       router.refresh();
@@ -50,7 +57,7 @@ export default function AdminLoginPage() {
             <p className="font-bold flex items-center gap-1">
               <CheckCircle2 className="h-3.5 w-3.5" /> Demo Login Credentials Pre-Filled:
             </p>
-            <p className="font-mono">Email: admin@rsak.org | Pass: admin123</p>
+            <p className="font-mono">Use your Supabase administrator email and password.</p>
           </div>
 
           {errorMsg && (

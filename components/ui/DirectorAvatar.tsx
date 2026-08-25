@@ -9,7 +9,7 @@ interface DirectorAvatarProps {
 }
 
 export default function DirectorAvatar({ size = "md", className = "" }: DirectorAvatarProps) {
-  const imgSrc = "https://res.cloudinary.com/sb6zkuxk/image/upload/v1786302634/WhatsApp_Image_2026-08-02_at_14.29.22.jpg";
+  const imgSrc = "https://res.cloudinary.com/sb6zkuxk/image/upload/v1786370945/rakhi_director.png";
 
   const dimensions = {
     sm: "h-12 w-12",

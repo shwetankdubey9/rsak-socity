@@ -1,17 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { initialBlogs } from "@/lib/data/seedData";
+import type { BlogPost } from "@/types";
+import { blogFromRow } from "@/lib/blogs";
+import { createClient } from "@/lib/supabase/client";
 import { Compass, Search, Calendar, User, Clock, ArrowRight } from "lucide-react";
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTag, setActiveTag] = useState<string>("All");
+  const [blogs, setBlogs] = useState<BlogPost[]>(initialBlogs);
+
+  useEffect(() => {
+    const loadBlogs = async () => {
+      const { data } = await createClient().from("blogs").select("*").eq("is_published", true).order("published_at", { ascending: false });
+      if (data?.length) setBlogs(data.map(blogFromRow));
+    };
+    void loadBlogs();
+  }, []);
 
   const tags = ["All", "GIS Mapping Jhansi", "Soil Health Card", "DEM", "Watershed"];
 
-  const filteredBlogs = initialBlogs.filter((blog) => {
+  const filteredBlogs = blogs.filter((blog) => {
     const matchesSearch =
       blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       blog.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||

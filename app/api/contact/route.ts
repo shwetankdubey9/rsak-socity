@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
 
 export async function POST(req: Request) {
   try {
@@ -9,8 +10,18 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Process contact submission (Logged or stored in Supabase contact_messages table)
-    console.log("New Contact Form Submission:", { name, email, phone, subject, message });
+    const supabase = await createServerSupabaseClient();
+    const { error } = await supabase.from("contact_messages").insert({
+      name,
+      email,
+      phone: phone || null,
+      subject: subject || "Website enquiry",
+      message,
+    });
+
+    if (error) {
+      return NextResponse.json({ error: "Unable to record contact message" }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true, message: "Contact message recorded" });
   } catch (err) {
