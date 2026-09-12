@@ -32,21 +32,21 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
             <MapPin className="h-3.5 w-3.5 text-pink-400" />
-            <span>630/A-1 K.K. Puri Colony, Awas Vikas, Jhansi (U.P.)</span>
+            <span>K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003</span>
           </div>
           <div className="flex items-center gap-1.5 text-emerald-400 font-mono">
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>ISO 9001:2015 Certified | Reg No: J-29813</span>
+            <span>GIS, Remote Sensing &amp; Social Work</span>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
           <a
-            href="tel:+919307909728"
+            href="tel:+919415504335"
             className="flex items-center gap-1.5 hover:text-sky-400 transition"
           >
             <Phone className="h-3.5 w-3.5 text-sky-400" />
-            <span>Hotline: +91 9307909728</span>
+            <span>Phone: 91-9415504335</span>
           </a>
           <Link
             href="/admin"
@@ -62,14 +62,14 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-pink-500 via-sky-500 to-emerald-400 p-0.5 shadow-md group-hover:scale-105 transition-transform">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-sky-600 p-0.5 shadow-sm group-hover:bg-sky-700 transition-colors">
             <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-slate-950">
               <Compass className="h-5 w-5 text-sky-400 group-hover:rotate-45 transition-transform duration-500" />
             </div>
           </div>
           <div>
-            <span className="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-r from-slate-900 via-sky-900 to-slate-900 dark:from-white dark:via-sky-200 dark:to-slate-200 bg-clip-text text-transparent">
-              RSAK Society
+            <span className="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
+              RAKHI-Society
             </span>
             <span className="block text-[10px] font-medium text-slate-500 dark:text-slate-400 tracking-wide uppercase">
               Remote Sensing & GIS • Jhansi
@@ -100,7 +100,7 @@ export default function Navbar() {
 
           <Link
             href="/admin"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-pink-600/10 border border-pink-500/30 px-3.5 py-2 text-xs font-bold text-pink-500 hover:bg-pink-500 hover:text-white transition-all shadow-sm"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-sky-50 border border-sky-200 px-3.5 py-2 text-xs font-bold text-sky-700 hover:bg-sky-600 hover:text-white transition-colors shadow-sm"
           >
             <ShieldCheck className="h-4 w-4" />
             <span>Upload & Edit CMS</span>
@@ -108,7 +108,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="hidden sm:inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all"
+            className="hidden sm:inline-flex items-center justify-center rounded-xl bg-sky-600 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-sky-700 transition-colors"
           >
             Get Map Quote
           </Link>
@@ -151,11 +151,11 @@ export default function Navbar() {
                 Admin Dashboard & CMS
               </Link>
               <a
-                href="tel:+919307909728"
+                href="tel:+919415504335"
                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-emerald-600 dark:text-emerald-400"
               >
                 <Phone className="h-4 w-4" />
-                Call +91-9307909728
+                Call 91-9415504335
               </a>
             </div>
           </div>

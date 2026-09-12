@@ -33,7 +33,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Admin Sidebar */}
       <aside className="w-full md:w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-6 flex-shrink-0">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-pink-500 via-sky-500 to-emerald-400 text-white">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-600 text-white">
             <ShieldCheck className="h-5 w-5" />
           </div>
           <div>

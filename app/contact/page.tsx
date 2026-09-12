@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { siteConfig } from "@/lib/seo";
+import { subjectInterests } from "@/lib/data/seedData";
 import { Compass, MapPin, Phone, Mail, Send, CheckCircle2, AlertCircle, ExternalLink } from "lucide-react";
 
 export default function ContactPage() {
@@ -56,7 +57,7 @@ export default function ContactPage() {
         </div>
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
           Get in Touch with <br />
-          <span className="majith-gradient-text">RSAK Society Jhansi</span>
+          <span className="majith-gradient-text">RAKHI-Society</span>
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
           Reach out for GIS mapping proposals, Soil Health Testing, Watershed DPR consultations, or general inquiries.
@@ -72,7 +73,7 @@ export default function ContactPage() {
 
               <div className="space-y-4 text-xs">
                 <div className="flex items-start gap-3">
-                  <div className="h-9 w-9 rounded-xl bg-pink-500/10 text-pink-500 flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -84,14 +85,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="h-9 w-9 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white">Registered Office</h3>
-                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-0.5">
-                      {siteConfig.registeredOffice}
-                    </p>
                   </div>
                 </div>
 
@@ -102,8 +100,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white">Telephones</h3>
                     <p className="text-slate-600 dark:text-slate-400 mt-0.5">
-                      <a href={`tel:${siteConfig.phone}`} className="hover:text-sky-500">{siteConfig.phone}</a> /{" "}
-                      <a href={`tel:${siteConfig.phoneAlt}`} className="hover:text-sky-500">{siteConfig.phoneAlt}</a>
+                      <a href="tel:+919415504335" className="hover:text-sky-500">{siteConfig.phone}</a>
                     </p>
                   </div>
                 </div>
@@ -124,8 +121,9 @@ export default function ContactPage() {
 
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
                 <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Leadership Contacts:</p>
-                <p className="text-xs text-slate-300"><strong>Director:</strong> Rakhi Shukla</p>
-                <p className="text-xs text-slate-300"><strong>Expert:</strong> Anil Kumar Shukla (ISRO PG Diploma)</p>
+                <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Director:</strong> Rakhi Devi</p>
+                <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Secretary:</strong> Dr. Bhuvan Kumar Dixit</p>
+                <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Program Director &amp; GIS Lead:</strong> Anil Kumar Shukla</p>
               </div>
 
               <a
@@ -214,10 +212,7 @@ export default function ContactPage() {
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
                     >
-                      <option value="GIS Mapping Inquiry">GIS Mapping in Jhansi</option>
-                      <option value="Soil Health Testing">Soil Health Testing</option>
-                      <option value="Watershed DPR">Watershed Management / DPR</option>
-                      <option value="General Information">General Partnership</option>
+                      {subjectInterests.map((interest) => <option key={interest} value={interest}>{interest}</option>)}
                     </select>
                   </div>
                 </div>

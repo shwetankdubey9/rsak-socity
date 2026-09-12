@@ -1,5 +1,47 @@
 @import "tailwindcss";
 
+@theme {
+  /* RSAK professional GIS and remote sensing palette */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #64748b;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #17324f;
+  --color-slate-900: #0b1f3a;
+  --color-slate-950: #07172b;
+
+  --color-sky-50: #f0f9ff;
+  --color-sky-100: #e0f2fe;
+  --color-sky-300: #7dd3fc;
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #38bdf8;
+  --color-sky-600: #0284c7;
+  --color-sky-700: #0369a1;
+  --color-sky-900: #0c4a6e;
+  --color-sky-950: #082f49;
+
+  --color-blue-500: #1976d2;
+  --color-blue-600: #1565c0;
+  --color-blue-700: #0d47a1;
+  --color-indigo-400: #38bdf8;
+  --color-indigo-600: #1565c0;
+
+  --color-emerald-400: #4caf50;
+  --color-emerald-500: #2e7d32;
+  --color-emerald-600: #256c29;
+  --color-emerald-700: #1b5e20;
+
+  /* Legacy accent utilities resolve to GIS blue rather than a competing brand color. */
+  --color-pink-300: #7dd3fc;
+  --color-pink-400: #38bdf8;
+  --color-pink-500: #0284c7;
+  --color-pink-600: #0369a1;
+}
+
 @layer base {
   :root {
     --background: #f8fafc;
@@ -8,19 +50,19 @@
     --card-foreground: #0f172a;
     --primary: #0284c7;
     --primary-foreground: #ffffff;
-    --accent: #0d9488;
+    --accent: #2e7d32;
     --border: #e2e8f0;
   }
 
   .dark {
-    --background: #090d16;
+    --background: #07172b;
     --foreground: #f1f5f9;
-    --card: #111827;
+    --card: #0b1f3a;
     --card-foreground: #f8fafc;
     --primary: #38bdf8;
-    --primary-foreground: #0f172a;
-    --accent: #2dd4bf;
-    --border: #1e293b;
+    --primary-foreground: #07172b;
+    --accent: #4caf50;
+    --border: #17324f;
   }
 }
 
@@ -31,34 +73,44 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* Glassmorphism utilities */
+/* Light, corporate surface treatment */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 24px rgba(11, 31, 58, 0.06);
 }
 
 .dark .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  border: 1px solid rgba(30, 41, 59, 0.8);
+  background: rgba(11, 31, 58, 0.92);
+  border: 1px solid #17324f;
 }
 
-/* Majith Rainbow Topography Elevation Palette */
+/* GIS blue heading treatment */
 .majith-gradient-text {
-  background: linear-gradient(135deg, #ec4899 0%, #a855f7 25%, #3b82f6 50%, #10b981 75%, #eab308 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #1565c0;
 }
 
 .majith-gradient-bg {
-  background: linear-gradient(135deg, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.15) 25%, rgba(59,130,246,0.15) 50%, rgba(16,185,129,0.15) 75%, rgba(234,179,8,0.15) 100%);
+  background: #f0f9ff;
+}
+
+.corporate-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.06);
+}
+
+.dark .corporate-panel {
+  background: #0b1f3a;
+  border-color: #17324f;
 }
 
 .majith-border-glow {
-  border: 1px solid transparent;
-  background: linear-gradient(var(--card), var(--card)) padding-box,
-              linear-gradient(135deg, #ec4899, #3b82f6, #10b981, #eab308) border-box;
+  border: 1px solid #bae6fd;
+  background: var(--card);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
 }
 
 /* Pulse animation for active GIS telemetry nodes */

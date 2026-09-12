@@ -86,7 +86,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
           {/* Author Card */}
           <div className="flex items-center gap-3 pt-4 border-t border-b border-slate-200 dark:border-slate-800 py-4">
-            <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-pink-500 to-sky-500 text-white flex items-center justify-center font-bold text-sm">
+            <div className="h-10 w-10 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
               {blog.author.charAt(0)}
             </div>
             <div>

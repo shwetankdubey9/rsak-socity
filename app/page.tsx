@@ -43,13 +43,13 @@ export default function HomePage() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-                <strong>Remote Sensing Agriculture Knowledge Help Integral Society (RSAK Society)</strong>, established in 2017 under Program Director <strong>Rakhi Shukla</strong> and Remote Sensing Lead <strong>Anil Kumar Shukla (ISRO PG Diploma)</strong>. Delivering high-precision 3D GIS mapping, soil health testing, and watershed development across Jhansi and Bundelkhand.
+                <strong>Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society)</strong>, established in 2017 under Program Director <strong>Rakhi Shukla</strong> and Remote Sensing Lead <strong>Anil Kumar Shukla (RS&amp;GIS-(IIRS-ISRO))</strong>. Delivering high-precision 3D GIS mapping, soil, other type social work and watershed development across Bundelkhand, Uttar Pradesh, and India.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-sky-500/25 hover:scale-[1.02] transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 transition-colors"
                 >
                   <span>Explore GIS Services</span>
                   <ArrowRight className="h-4 w-4" />
@@ -58,7 +58,7 @@ export default function HomePage() {
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 px-6 py-3 text-sm font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
                 >
-                  <MapPin className="h-4 w-4 text-pink-500" />
+                  <MapPin className="h-4 w-4 text-sky-600" />
                   <span>Jhansi HQ Directions</span>
                 </Link>
               </div>
@@ -74,8 +74,8 @@ export default function HomePage() {
                   <span>37+ Completed Projects</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-pink-500 flex-shrink-0" />
-                  <span>Reg No: J-29813</span>
+                  <CheckCircle2 className="h-4 w-4 text-sky-500 flex-shrink-0" />
+                  <span>India-wide Services</span>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function HomePage() {
               <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">GIS & Agri Projects</p>
             </div>
             <div className="space-y-1">
-              <p className="text-3xl font-extrabold text-pink-400">15,000+</p>
+              <p className="text-3xl font-extrabold text-sky-400">15,000+</p>
               <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">Soil Samples Tested</p>
             </div>
             <div className="space-y-1">
@@ -105,7 +105,7 @@ export default function HomePage() {
               <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">Established Year</p>
             </div>
             <div className="space-y-1">
-              <p className="text-3xl font-extrabold text-amber-400">100%</p>
+              <p className="text-3xl font-extrabold text-emerald-400">100%</p>
               <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">Bundelkhand Commitment</p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function HomePage() {
       {/* GIS MAPPING IN JHANSI 3D SHOWCASE */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-pink-500/10 px-3 py-1 text-xs font-semibold text-pink-500">
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-600">
             <Building2 className="h-3.5 w-3.5" />
             <span>Interactive Spatial Feature</span>
           </div>
@@ -190,11 +190,11 @@ export default function HomePage() {
 
       {/* LEADERSHIP SPOTLIGHT */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+        <div className="rounded-3xl border border-slate-800 bg-slate-900 text-white p-8 lg:p-12 shadow-xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Leadership Details */}
             <div className="lg:col-span-8 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-pink-500/20 px-3 py-1 text-xs font-semibold text-pink-400 border border-pink-500/30">
+              <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/20 px-3 py-1 text-xs font-semibold text-sky-300 border border-sky-500/30">
                 <span>Society Leadership</span>
               </div>
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-white">
@@ -202,29 +202,22 @@ export default function HomePage() {
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                <div className="rounded-2xl bg-slate-900/90 border border-pink-500/30 p-5 space-y-3 relative overflow-hidden">
+                <div className="rounded-2xl bg-slate-900/90 border border-sky-500/30 p-5 space-y-3 relative overflow-hidden">
                   <div className="flex items-center gap-4">
                     <DirectorAvatar size="md" />
                     <div>
-                      <h3 className="font-bold text-lg text-pink-400">Rakhi Shukla</h3>
-                      <p className="text-xs text-slate-300 font-medium">Chief Functionary / Program Director</p>
-                      <span className="inline-block mt-1 rounded bg-pink-500/20 px-2 py-0.5 text-[10px] font-semibold text-pink-300 border border-pink-500/30">
-                        NGO Founder & Program Director
+                      <h3 className="font-bold text-lg text-sky-300">Rakhi Devi</h3>
+                      <p className="text-xs text-slate-300 font-medium">Director</p>
+                      <span className="inline-block mt-1 rounded bg-sky-500/20 px-2 py-0.5 text-[10px] font-semibold text-sky-200 border border-sky-500/30">
+                        Director
                       </span>
                     </div>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed pt-1">
-                    Directing community mobilization, gender mainstreaming, and sustainable rural development initiatives across UP & Bundelkhand since 2017.
-                  </p>
                 </div>
 
                 <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-5 space-y-2">
                   <h3 className="font-bold text-lg text-sky-400">Anil Kumar Shukla</h3>
                   <p className="text-xs text-slate-300 font-medium">Program Director & GIS Lead</p>
-                  <p className="text-xs text-slate-400 font-mono text-[11px]">MSc (Agriculture), PG Diploma (ISRO)</p>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Specializing in remote sensing satellite image interpretation, Digital Elevation Modeling (DEM), and watershed management.
-                  </p>
                 </div>
               </div>
             </div>
@@ -234,15 +227,15 @@ export default function HomePage() {
               <Compass className="h-12 w-12 text-sky-400 mx-auto" />
               <h4 className="font-bold text-base text-white">Headquarters Contact</h4>
               <p className="text-xs text-slate-400">
-                630/A-1 K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003
+                K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003
               </p>
               <div className="pt-2">
                 <a
-                  href="tel:+919307909728"
+                  href="tel:+919415504335"
                   className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-semibold text-white hover:bg-emerald-500 transition w-full justify-center"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>Call +91 9307909728</span>
+                  <span>Call 91-9415504335</span>
                 </a>
               </div>
             </div>
@@ -254,7 +247,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-pink-500">Track Record</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-sky-600">Track Record</span>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">
               Key Projects Handled
             </h2>
@@ -335,7 +328,7 @@ export default function HomePage() {
 
       {/* CTA BANNER */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 p-8 sm:p-12 text-white shadow-xl text-center space-y-6">
+        <div className="rounded-3xl bg-sky-700 p-8 sm:p-12 text-white shadow-lg text-center space-y-6">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Need Expert GIS Mapping or Soil Testing in Jhansi?
           </h2>

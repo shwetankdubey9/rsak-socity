@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-16">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-3">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-tr from-pink-500 via-sky-500 to-emerald-400 p-0.5 shadow-lg">
+          <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-600 p-0.5 shadow-sm">
             <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-slate-950 text-sky-400">
               <ShieldCheck className="h-7 w-7" />
             </div>

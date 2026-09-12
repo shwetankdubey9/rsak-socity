@@ -22,7 +22,7 @@ export default function DirectorAvatar({ size = "md", className = "" }: Director
     <div className={`relative overflow-hidden rounded-2xl border-2 border-pink-500/50 shadow-xl bg-slate-900 ${dimensions[size]} ${className}`}>
       <Image
         src={imgSrc}
-        alt="Rakhi Shukla - Program"
+        alt="Rakhi Devi - Director"
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
         className="object-cover object-top hover:scale-105 transition-transform duration-500"

@@ -11,22 +11,22 @@ export default function Footer() {
           {/* Col 1: NGO Summary */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-pink-500 to-sky-500 text-white">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-600 text-white">
                 <Compass className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-bold text-white text-base">RSAK Society</h3>
-                <p className="text-xs text-sky-400 font-mono">Reg No: J-29813 | Est. 2017</p>
+                <h3 className="font-bold text-white text-base">RAKHI-Society</h3>
+                <p className="text-xs text-sky-400 font-mono">Established 2017</p>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Remote Sensing Agriculture Knowledge Help Integral Society, Jhansi. Dedicated to high-precision GIS mapping in Jhansi, hydro-geological elevation modeling, soil health testing, and poverty alleviation in Bundelkhand.
+              Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society). GIS mapping, remote sensing, soil health testing, watershed management, technical and social work services.
             </p>
 
             <div className="space-y-1 text-xs text-slate-300">
-              <p><strong className="text-white">Program Director:</strong> Rakhi Shukla</p>
-              <p><strong className="text-white">Remote Sensing Lead:</strong> Anil Kumar Shukla (MSc Ag, PG Diploma ISRO)</p>
+              <p><strong className="text-white">Director:</strong> Rakhi Devi</p>
+              <p><strong className="text-white">Program Director &amp; GIS Lead:</strong> Anil Kumar Shukla</p>
             </div>
           </div>
 
@@ -93,19 +93,18 @@ export default function Footer() {
 
           {/* Col 4: Contact & Google Map Direct Link */}
           <div className="space-y-3">
-            <h4 className="font-semibold text-white text-sm uppercase tracking-wider text-pink-400">
+            <h4 className="font-semibold text-white text-sm uppercase tracking-wider text-sky-400">
               Jhansi Office Location
             </h4>
 
             <div className="space-y-2 text-xs text-slate-300">
               <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-pink-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="h-4 w-4 text-sky-400 flex-shrink-0 mt-0.5" />
                 <span>{siteConfig.address}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-sky-400 flex-shrink-0" />
-                <a href={`tel:${siteConfig.phone}`} className="hover:text-white">{siteConfig.phone}</a> /
-                <a href={`tel:${siteConfig.phoneAlt}`} className="hover:text-white">{siteConfig.phoneAlt}</a>
+                <a href={`tel:${siteConfig.phone}`} className="hover:text-white">{siteConfig.phone}</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-emerald-400 flex-shrink-0" />
@@ -130,7 +129,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-slate-800 pt-6 text-center text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} Remote Sensing Agriculture Knowledge Help Integral Society. All rights reserved.</p>
           <div className="flex flex-col sm:flex-row items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sky-500/20 via-pink-500/20 to-emerald-500/20 px-3.5 py-1 text-xs font-bold text-sky-400 border border-sky-500/30 shadow-sm">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-bold text-sky-400 border border-sky-500/30 shadow-sm">
               ✨ Project made by Shwetank Dubey
             </span>
             <p className="text-[11px] text-slate-400">

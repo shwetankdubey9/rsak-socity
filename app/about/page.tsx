@@ -1,12 +1,11 @@
 import React from "react";
-import Metadata from "next";
 import { constructMetadata } from "@/lib/seo";
-import { initialCommitteeMembers, initialProjects } from "@/lib/data/seedData";
-import { Compass, Users, Award, ShieldCheck, CheckCircle2, HardDrive } from "lucide-react";
+import { initialCommitteeMembers, initialProjects, subjectInterests } from "@/lib/data/seedData";
+import { Compass, Users, ShieldCheck, HardDrive, Tags } from "lucide-react";
 
 export const metadata = constructMetadata({
-  title: "About Us & Committees | RSAK Society Jhansi",
-  description: "Learn about Remote Sensing Agriculture Knowledge Help Integral Society, Director Rakhi Shukla, Expert Anil Shukla, governing body committees, equipment, and 37+ projects handled.",
+  title: "About Us & Team | RAKHI-Society",
+  description: "Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society) provides GIS mapping, remote sensing, watershed management, soil health testing and related work.",
 });
 
 export default function AboutPage() {
@@ -16,14 +15,14 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-500 border border-sky-500/20">
           <Compass className="h-3.5 w-3.5" />
-          <span>About RSAK Society Jhansi</span>
+          <span>About RAKHI-Society</span>
         </div>
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-          Remote Sensing Agriculture Knowledge <br />
-          <span className="majith-gradient-text">Help Integral Society</span>
+          Remote Sensing Agriculture Knowledge Help <br />
+          <span className="majith-gradient-text">Integral Society (RAKHI-Society)</span>
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          Established on 18th April 2017 (Registration No: J-29813) in Jhansi, Uttar Pradesh. Operating under ISO 9001:2015 standards to bring positive transformational change to the poor and farming communities of the Bundelkhand region.
+          Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society), established in 2017 under Program Director Rakhi Shukla and Remote Sensing Lead Anil Kumar Shukla (RS&amp;GIS-(IIRS-ISRO)). Delivering high-precision 3D GIS mapping, soil, other type social work and watershed development across Bundelkhand, Uttar Pradesh, and India.
         </p>
       </section>
 
@@ -57,7 +56,7 @@ export default function AboutPage() {
         <div className="flex items-center gap-3">
           <Users className="h-6 w-6 text-sky-500" />
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-            Members of Governing Body
+            Organization Team
           </h2>
         </div>
 
@@ -65,25 +64,35 @@ export default function AboutPage() {
           <table className="w-full text-left text-xs">
             <thead className="bg-slate-100 dark:bg-slate-950 text-slate-700 dark:text-slate-300 font-semibold border-b border-slate-200 dark:border-slate-800">
               <tr>
-                <th className="p-4">S.N.</th>
                 <th className="p-4">Name</th>
-                <th className="p-4">Educational Qualification</th>
                 <th className="p-4">Designation</th>
-                <th className="p-4">Area of Specialization</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               {initialCommitteeMembers.map((member) => (
                 <tr key={member.sn} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
-                  <td className="p-4 font-mono font-bold text-sky-500">{member.sn}</td>
                   <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">{member.name}</td>
-                  <td className="p-4 text-slate-600 dark:text-slate-400 font-mono text-[11px]">{member.qualification}</td>
                   <td className="p-4 text-slate-900 dark:text-slate-200 font-medium">{member.designation}</td>
-                  <td className="p-4 text-sky-600 dark:text-sky-400 font-medium">{member.specialization}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="flex items-center gap-3">
+          <Tags className="h-6 w-6 text-sky-500" />
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Subject Interest</h2>
+        </div>
+        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div className="flex flex-wrap gap-3">
+            {subjectInterests.map((interest) => (
+              <span key={interest} className="rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs font-medium text-sky-800 dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-300">
+                {interest}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

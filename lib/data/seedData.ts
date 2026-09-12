@@ -1,14 +1,15 @@
 import { ProjectItem, ServiceItem, BlogPost, GalleryItem, CommitteeMember } from "@/types";
 
 export const initialCommitteeMembers: CommitteeMember[] = [
-  { sn: 1, name: "Dr. Bhuvan Kumar Dixit", qualification: "Dr. ,LLM", designation: "Secretary", specialization: "Law" },
-  { sn: 2, name: "Anil Kumar Shukla", qualification: "MSc (Agriculture), PG Diploma (ISRO)", designation: "Program Director & GIS Lead", specialization: "Remote Sensing & GIS" },
-  { sn: 4, name: "Kailash Gupta", qualification: "MA", designation: "Financial Controller", specialization: "Business & Finance" },
-  { sn: 5, name: "Deep Singh", qualification: "MA, LLB (2001)", designation: "Treasurer", specialization: "Health Education" },
-  { sn: 6, name: "Manish Kumar Pal", qualification: "B.Com, PGDCA", designation: "Member (Technical)", specialization: "GIS Mapping" },
-  { sn: 7, name: "Priyanka Dubey", qualification: "B.Com, M.Com, PGDCA", designation: "Member", specialization: "Accountant" },
-  { sn: 8, name: "K P Pathak", qualification: "M.Tech", designation: "Member", specialization: "Behaviour Science" },
-  { sn: 9, name: "Suneel Patel", qualification: "LLB", designation: "Member", specialization: "Law" },
+  { sn: 1, name: "Rakhi Devi", qualification: "", designation: "Director", specialization: "" },
+  { sn: 2, name: "Dr. Bhuvan Kumar Dixit", qualification: "", designation: "Secretary", specialization: "" },
+  { sn: 3, name: "Anil Kumar Shukla", qualification: "", designation: "Program Director & GIS Lead", specialization: "" },
+];
+
+export const subjectInterests = [
+  "GIS Mapping in India", "RS & Hyperspectral Technology", "Watershed Management",
+  "DPR General Partnership", "Digital Satellite KMLZ File", "Other Social Work",
+  "Other Technical Work", "Satellite Classification",
 ];
 
 export const initialProjects: ProjectItem[] = [
@@ -177,8 +178,8 @@ export const initialServices: ServiceItem[] = [
     id: "srv-2",
     title: "Soil Health Testing & Nutrient Mapping",
     slug: "soil-health-testing",
-    shortDesc: "Comprehensive NPK, micronutrient, and organic carbon laboratory testing with GPS-based soil fertility cards.",
-    fullDesc: "Operated in collaboration with regional testing laboratories, RSAK Society provides end-to-end soil sample extraction, chemical spectrometry analysis, and personalized Soil Health Cards. Over 15,000+ soil samples processed across Mahoba, Jhansi, and neighboring districts.",
+    shortDesc: "Soil health testing and nutrient mapping support for understanding soil conditions and improving spatial planning and agricultural decision-making.",
+    fullDesc: "Soil health testing and nutrient mapping support for understanding soil conditions and improving spatial planning and agricultural decision-making.",
     iconName: "FlaskConical",
     features: [
       "Macro & Micronutrient Analysis (N, P, K, Zn, Fe, Cu, Mn, B)",
@@ -345,8 +346,8 @@ export const initialGallery: GalleryItem[] = [
   },
   {
     id: "gal-3",
-    title: "Director Rakhi Shukla & Executive Leadership",
-    description: "Program Director Rakhi Shukla guiding agricultural awareness and rural empowerment programs.",
+    title: "Director Rakhi Devi & Executive Leadership",
+    description: "Director Rakhi Devi leading RAKHI-Society.",
     category: "Events",
     imageUrl: "https://res.cloudinary.com/sb6zkuxk/image/upload/v1786370945/rakhi_director.png",
     location: "RSAK Headquarters Jhansi",
