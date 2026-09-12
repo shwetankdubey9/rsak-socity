@@ -48,7 +48,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="space-y-12 pb-20 pt-10">
+    <div className="agri-page space-y-16 pb-24 pt-12">
       {/* Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-500 border border-sky-500/20">
@@ -68,7 +68,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Contact Details & Google Maps Embed */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 space-y-6 shadow-sm">
+            <div className="premium-card rounded-3xl p-8 space-y-6">
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">Headquarters Information</h2>
 
               <div className="space-y-4 text-xs">
@@ -141,7 +141,7 @@ export default function ContactPage() {
 
           {/* Interactive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-sm space-y-6">
+            <div className="premium-card rounded-3xl p-8 space-y-6">
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">Send Us a Direct Message</h2>
 
               {status === "success" && (

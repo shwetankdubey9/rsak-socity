@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
 
 export default function AboutPage() {
   return (
-    <div className="space-y-16 pb-20 pt-10">
+    <div className="agri-page space-y-16 pb-24 pt-12">
       {/* Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-500 border border-sky-500/20">

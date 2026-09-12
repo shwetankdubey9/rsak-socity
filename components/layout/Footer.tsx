@@ -5,8 +5,8 @@ import { siteConfig } from "@/lib/seo";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-900 text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="w-full border-t border-slate-800 bg-slate-950 text-slate-300">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Col 1: NGO Summary */}
           <div className="space-y-4">

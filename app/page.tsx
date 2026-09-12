@@ -25,38 +25,38 @@ export default function HomePage() {
   const featuredBlogs = initialBlogs.slice(0, 3);
 
   return (
-    <div className="space-y-24 pb-20">
+    <div className="agri-page space-y-28 pb-24">
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 lg:pt-20">
+      <section className="agri-hero overflow-hidden pb-6 pt-14 lg:pb-10 lg:pt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-600 dark:text-sky-400">
+            <div className="lg:col-span-7 space-y-7 text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.08em] text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300">
                 <span className="h-2 w-2 rounded-full bg-sky-400 animate-ping" />
                 <span>Pioneering GIS Mapping & Soil Testing in Jhansi</span>
               </div>
 
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-slate-900 dark:text-white leading-[1.1]">
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-slate-900 dark:text-white leading-[1.05]">
                 Remote Sensing & <br className="hidden sm:inline" />
                 <span className="majith-gradient-text">Agricultural Intelligence</span>
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+              <p className="max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
                 <strong>Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society)</strong>, established in 2017 under Program Director <strong>Rakhi Shukla</strong> and Remote Sensing Lead <strong>Anil Kumar Shukla (RS&amp;GIS-(IIRS-ISRO))</strong>. Delivering high-precision 3D GIS mapping, soil, other type social work and watershed development across Bundelkhand, Uttar Pradesh, and India.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-sky-600/15 hover:bg-sky-700 transition-colors"
                 >
                   <span>Explore GIS Services</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 px-6 py-3 text-sm font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 shadow-sm hover:border-sky-200 hover:bg-sky-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 transition"
                 >
                   <MapPin className="h-4 w-4 text-sky-600" />
                   <span>Jhansi HQ Directions</span>
@@ -64,7 +64,7 @@ export default function HomePage() {
               </div>
 
               {/* Badges Bar */}
-              <div className="pt-6 border-t border-slate-200 dark:border-slate-800 grid grid-cols-3 gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+              <div className="grid grid-cols-3 gap-4 border-t border-slate-200 pt-6 text-xs font-medium text-slate-500 dark:border-slate-800 dark:text-slate-400">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
                   <span>ISO 9001:2015</span>
@@ -81,7 +81,8 @@ export default function HomePage() {
             </div>
 
             {/* Right Hero Visualizer: Interactive Majith DEM */}
-            <div className="lg:col-span-5">
+            <div className="relative lg:col-span-5 lg:pl-4">
+              <div className="absolute -right-3 -top-3 hidden rounded-xl border border-emerald-200 bg-white px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-emerald-700 shadow-sm md:block dark:border-emerald-900 dark:bg-slate-900 dark:text-emerald-300">Live spatial view</div>
               <MajithDEMVisualizer />
             </div>
           </div>
@@ -89,9 +90,9 @@ export default function HomePage() {
       </section>
 
       {/* STATS OVERVIEW */}
-      <section className="bg-slate-900 py-12 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="agri-stat-section py-14 text-white">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:divide-x md:divide-slate-700/80 text-center">
             <div className="space-y-1">
               <p className="text-3xl font-extrabold text-sky-400">37+</p>
               <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">GIS & Agri Projects</p>
@@ -152,7 +153,7 @@ export default function HomePage() {
           {initialServices.slice(0, 3).map((service) => (
             <div
               key={service.id}
-              className="group relative rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="premium-card group relative flex flex-col justify-between rounded-2xl p-7"
             >
               <div className="space-y-4">
                 <div className="h-12 w-12 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center border border-sky-500/20 group-hover:scale-110 transition-transform">
@@ -190,7 +191,7 @@ export default function HomePage() {
 
       {/* LEADERSHIP SPOTLIGHT */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-800 bg-slate-900 text-white p-8 lg:p-12 shadow-xl relative overflow-hidden">
+        <div className="agri-dark-panel rounded-3xl border border-slate-800 text-white p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Leadership Details */}
             <div className="lg:col-span-8 space-y-6">
@@ -257,7 +258,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+        <div className="premium-card overflow-x-auto rounded-2xl">
           <table className="w-full text-left text-xs">
             <thead className="bg-slate-100 dark:bg-slate-950 text-slate-700 dark:text-slate-300 font-semibold border-b border-slate-200 dark:border-slate-800">
               <tr>
@@ -301,7 +302,7 @@ export default function HomePage() {
           {featuredBlogs.map((blog) => (
             <div
               key={blog.id}
-              className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+              className="premium-card flex flex-col justify-between overflow-hidden rounded-2xl"
             >
               <div className="p-6 space-y-3">
                 <span className="inline-block rounded-md bg-sky-500/10 px-2.5 py-1 text-[10px] font-bold text-sky-600 dark:text-sky-400">
@@ -328,7 +329,7 @@ export default function HomePage() {
 
       {/* CTA BANNER */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-sky-700 p-8 sm:p-12 text-white shadow-lg text-center space-y-6">
+        <div className="agri-dark-panel rounded-3xl p-8 text-center text-white sm:p-12 space-y-6">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Need Expert GIS Mapping or Soil Testing in Jhansi?
           </h2>

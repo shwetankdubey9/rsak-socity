@@ -29,7 +29,7 @@ export default function GalleryPage() {
       : items.filter((item) => item.category === activeCategory);
 
   return (
-    <div className="space-y-12 pb-20 pt-10">
+    <div className="agri-page space-y-16 pb-24 pt-12">
       {/* Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-pink-500/10 px-3.5 py-1 text-xs font-semibold text-pink-500 border border-pink-500/20">
@@ -69,7 +69,7 @@ export default function GalleryPage() {
             <div
               key={item.id}
               onClick={() => setActiveLightbox(item)}
-              className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-900 cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
+              className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-slate-900 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800"
             >
               {/* Image */}
               <Image

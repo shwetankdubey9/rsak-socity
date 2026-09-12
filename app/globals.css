@@ -73,6 +73,118 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
+/* Premium agritech layout primitives. These are intentionally structural only:
+   website content and application behavior remain unchanged. */
+.agri-page {
+  background:
+    radial-gradient(circle at 92% 3%, rgba(46, 125, 50, 0.08), transparent 26rem),
+    radial-gradient(circle at 3% 22%, rgba(21, 101, 192, 0.06), transparent 24rem),
+    var(--background);
+}
+
+.agri-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.agri-hero::before,
+.agri-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.agri-hero::before {
+  top: 2rem;
+  right: -7rem;
+  width: min(42vw, 38rem);
+  height: min(42vw, 38rem);
+  border-radius: 9999px;
+  background: rgba(46, 125, 50, 0.08);
+  filter: blur(1px);
+}
+
+.agri-hero::after {
+  right: 7%;
+  bottom: 1rem;
+  width: 36%;
+  height: 32%;
+  border: 1px solid rgba(21, 101, 192, 0.12);
+  border-radius: 1.5rem;
+  transform: rotate(-5deg);
+}
+
+.premium-card {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.055);
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  border-color: #bae6fd;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.10);
+}
+
+.dark .premium-card {
+  background: #0b1f3a;
+  border-color: #17324f;
+}
+
+.agri-stat-section {
+  position: relative;
+  overflow: hidden;
+  background: #0b1f3a;
+}
+
+.agri-stat-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image: linear-gradient(rgba(56, 189, 248, 0.17) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.17) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: linear-gradient(90deg, transparent, black 25%, black 75%, transparent);
+}
+
+.agri-dark-panel {
+  position: relative;
+  overflow: hidden;
+  background: #0b1f3a;
+  box-shadow: 0 18px 48px rgba(11, 31, 58, 0.18);
+}
+
+.agri-dark-panel::after {
+  content: "";
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  right: -7rem;
+  bottom: -10rem;
+  border-radius: 9999px;
+  background: rgba(46, 125, 50, 0.16);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: #f0fdf4;
+  color: #2e7d32;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.45rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.dark .section-kicker {
+  background: rgba(46, 125, 50, 0.16);
+  color: #86efac;
+}
+
 /* Light, corporate surface treatment */
 .glass-panel {
   background: rgba(255, 255, 255, 0.92);

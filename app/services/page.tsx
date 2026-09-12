@@ -34,7 +34,7 @@ export default function ServicesPage() {
   );
 
   return (
-    <div className="space-y-12 pb-20 pt-10">
+    <div className="agri-page space-y-16 pb-24 pt-12">
       {/* Page Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-500 border border-sky-500/20">
@@ -108,7 +108,7 @@ export default function ServicesPage() {
       {/* GIS service catalogue and service cards */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-          <aside className="self-start rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:col-span-4">
+          <aside className="premium-card self-start rounded-3xl p-6 lg:col-span-4">
             <div className="mb-5 flex items-center gap-3 border-b border-slate-100 pb-5 dark:border-slate-800">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-sky-500">
                 <Map className="h-5 w-5" />
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                   <div
                     key={service.id}
                     id={service.slug}
-                    className="flex flex-col justify-between space-y-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900"
+                    className="premium-card flex flex-col justify-between space-y-6 rounded-3xl p-6"
                   >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">

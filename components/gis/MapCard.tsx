@@ -11,7 +11,7 @@ interface MapCardProps {
 
 export default function MapCard({ map, onPreview }: MapCardProps) {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+    <article className="premium-card group overflow-hidden rounded-2xl">
       <div className="flex items-center justify-between border-b border-slate-100 px-4 py-3 dark:border-slate-800">
         <h3 className="text-sm font-bold text-slate-900 dark:text-white">{map.title}</h3>
         {map.image && (
