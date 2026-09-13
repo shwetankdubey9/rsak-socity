@@ -39,7 +39,7 @@ export default function BlogPage() {
     <div className="space-y-12 pb-20 pt-10">
       {/* Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3.5 py-1 text-xs font-semibold text-emerald-500 border border-emerald-500/20">
+        <div className="inline-flex items-center gap-2 rounded-full bg-herb/10 px-3.5 py-1 text-xs font-semibold text-herb border border-herb/20">
           <Compass className="h-3.5 w-3.5" />
           <span>Research & Project Insights</span>
         </div>
@@ -59,7 +59,7 @@ export default function BlogPage() {
             placeholder="Search articles by keyword or author..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pl-10 pr-4 py-3 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm"
+            className="w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pl-10 pr-4 py-3 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-herb shadow-sm"
           />
         </div>
 
@@ -71,7 +71,7 @@ export default function BlogPage() {
               onClick={() => setActiveTag(t)}
               className={`px-3 py-1.5 rounded-xl text-xs font-medium transition ${
                 activeTag === t
-                  ? "bg-sky-600 text-white shadow-sm"
+                  ? "bg-radiate text-white shadow-sm"
                   : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200"
               }`}
             >
@@ -91,16 +91,16 @@ export default function BlogPage() {
             >
               <div className="p-6 space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="rounded-md bg-sky-500/10 px-2.5 py-1 text-[10px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">
+                  <span className="rounded-md bg-radiate/10 px-2.5 py-1 text-[10px] font-bold text-herb dark:text-gleam uppercase tracking-wider">
                     {blog.category}
                   </span>
                   <span className="text-[11px] text-slate-400 flex items-center gap-1 font-mono">
-                    <Clock className="h-3 w-3 text-sky-400" />
+                    <Clock className="h-3 w-3 text-gleam" />
                     <span>{blog.readTime}</span>
                   </span>
                 </div>
 
-                <h2 className="text-lg font-bold text-slate-900 dark:text-white line-clamp-2 hover:text-sky-500 transition">
+                <h2 className="text-lg font-bold text-slate-900 dark:text-white line-clamp-2 hover:text-herb transition">
                   <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
                 </h2>
 
@@ -117,7 +117,7 @@ export default function BlogPage() {
 
                 <Link
                   href={`/blog/${blog.slug}`}
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-sky-600 dark:text-sky-400 hover:translate-x-1 transition-transform"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-herb dark:text-gleam hover:translate-x-1 transition-transform"
                 >
                   <span>Read Article</span>
                   <ArrowRight className="h-3.5 w-3.5" />

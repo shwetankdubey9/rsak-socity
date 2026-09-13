@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 py-16">
       <div className="text-center space-y-6 max-w-md">
-        <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-500 border border-sky-500/20">
+        <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-radiate/10 text-herb border border-herb/20">
           <Compass className="h-8 w-8 animate-spin" />
         </div>
         <div>
@@ -20,7 +20,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-2.5 text-xs font-semibold text-white hover:bg-sky-500 transition shadow-md"
+            className="inline-flex items-center gap-2 rounded-xl bg-radiate px-5 py-2.5 text-xs font-semibold text-white hover:bg-radiate transition shadow-md"
           >
             <Home className="h-4 w-4" />
             <span>Return Home</span>

@@ -96,7 +96,7 @@ export default function AdminServicesPage() {
         </div>
         <button
           onClick={openCreateModal}
-          className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold text-white hover:bg-emerald-500 transition shadow-md"
+          className="inline-flex items-center gap-2 rounded-xl bg-radiate px-4 py-2.5 text-xs font-bold text-moss hover:bg-gleam transition shadow-md"
         >
           <Plus className="h-4 w-4" />
           <span>Add New Service</span>
@@ -111,7 +111,7 @@ export default function AdminServicesPage() {
             className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-3 shadow-sm flex flex-col justify-between"
           >
             <div className="space-y-2">
-              <span className="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-500">
+              <span className="rounded bg-herb/10 px-2 py-0.5 text-[10px] font-bold text-herb">
                 {s.category}
               </span>
               <h3 className="font-bold text-base text-slate-900 dark:text-white">{s.title}</h3>
@@ -123,7 +123,7 @@ export default function AdminServicesPage() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => openEditModal(s)}
-                  className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-emerald-500"
+                  className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-herb"
                 >
                   <Edit className="h-3.5 w-3.5" />
                 </button>
@@ -196,7 +196,7 @@ export default function AdminServicesPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-xl bg-emerald-600 text-xs font-bold text-white hover:bg-emerald-500"
+                  className="px-4 py-2 rounded-xl bg-radiate text-xs font-bold text-moss hover:bg-gleam"
                 >
                   Save Service
                 </button>

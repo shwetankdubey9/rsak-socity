@@ -19,7 +19,7 @@ export default function DirectorAvatar({ size = "md", className = "" }: Director
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl border-2 border-pink-500/50 shadow-xl bg-slate-900 ${dimensions[size]} ${className}`}>
+    <div className={`relative overflow-hidden rounded-2xl border-2 border-radiate/50 shadow-xl bg-slate-900 ${dimensions[size]} ${className}`}>
       <Image
         src={imgSrc}
         alt="Rakhi Devi - Director"

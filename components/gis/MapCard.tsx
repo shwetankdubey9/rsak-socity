@@ -19,7 +19,7 @@ export default function MapCard({ map, onPreview }: MapCardProps) {
             type="button"
             onClick={() => onPreview(map)}
             aria-label={`View ${map.title} at full size`}
-            className="rounded-lg p-1.5 text-slate-400 transition hover:bg-sky-500/10 hover:text-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="rounded-lg p-1.5 text-slate-400 transition hover:bg-radiate/10 hover:text-herb focus:outline-none focus:ring-2 focus:ring-herb"
           >
             <Maximize2 className="h-4 w-4" />
           </button>
@@ -37,7 +37,7 @@ export default function MapCard({ map, onPreview }: MapCardProps) {
           />
         ) : (
           <div className="flex max-w-[13rem] flex-col items-center gap-3 text-center text-slate-500 dark:text-slate-400">
-            <MapIcon className="h-9 w-9 text-sky-500" />
+            <MapIcon className="h-9 w-9 text-herb" />
             <p className="text-xs font-medium">Map asset awaiting client upload</p>
           </div>
         )}

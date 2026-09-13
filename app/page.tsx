@@ -27,54 +27,54 @@ export default function HomePage() {
   return (
     <div className="agri-page space-y-28 pb-24">
       {/* HERO SECTION */}
-      <section className="agri-hero overflow-hidden pb-6 pt-14 lg:pb-10 lg:pt-24">
+      <section className="agri-hero overflow-hidden bg-moss pb-6 pt-14 text-pearl lg:pb-10 lg:pt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-7 text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.08em] text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300">
-                <span className="h-2 w-2 rounded-full bg-sky-400 animate-ping" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-gleam/40 bg-herb/30 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.08em] text-gleam">
+                <span className="h-2 w-2 rounded-full bg-gleam animate-ping" />
                 <span>Pioneering GIS Mapping & Soil Testing in Jhansi</span>
               </div>
 
-              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-slate-900 dark:text-white leading-[1.05]">
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-pearl leading-[1.05]">
                 Remote Sensing & <br className="hidden sm:inline" />
-                <span className="majith-gradient-text">Agricultural Intelligence</span>
+                <span className="text-gleam">Agricultural Intelligence</span>
               </h1>
 
-              <p className="max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
+              <p className="max-w-2xl text-base leading-8 text-pearl/80 sm:text-lg">
                 <strong>Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society)</strong>, established in 2017 under Program Director <strong>Rakhi Shukla</strong> and Remote Sensing Lead <strong>Anil Kumar Shukla (RS&amp;GIS-(IIRS-ISRO))</strong>. Delivering high-precision 3D GIS mapping, soil, other type social work and watershed development across Bundelkhand, Uttar Pradesh, and India.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-sky-600/15 hover:bg-sky-700 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-xl bg-radiate px-6 py-3.5 text-sm font-semibold text-moss shadow-md hover:bg-gleam transition-colors"
                 >
                   <span>Explore GIS Services</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-800 shadow-sm hover:border-sky-200 hover:bg-sky-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-pearl/70 bg-transparent px-6 py-3.5 text-sm font-semibold text-pearl shadow-sm hover:border-gleam hover:bg-herb/30 transition"
                 >
-                  <MapPin className="h-4 w-4 text-sky-600" />
+                  <MapPin className="h-4 w-4 text-gleam" />
                   <span>Jhansi HQ Directions</span>
                 </Link>
               </div>
 
               {/* Badges Bar */}
-              <div className="grid grid-cols-3 gap-4 border-t border-slate-200 pt-6 text-xs font-medium text-slate-500 dark:border-slate-800 dark:text-slate-400">
+              <div className="grid grid-cols-3 gap-4 border-t border-herb/60 pt-6 text-xs font-medium text-pearl/70">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-gleam flex-shrink-0" />
                   <span>ISO 9001:2015</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-sky-500 flex-shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-gleam flex-shrink-0" />
                   <span>37+ Completed Projects</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-sky-500 flex-shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-gleam flex-shrink-0" />
                   <span>India-wide Services</span>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
 
             {/* Right Hero Visualizer: Interactive Majith DEM */}
             <div className="relative lg:col-span-5 lg:pl-4">
-              <div className="absolute -right-3 -top-3 hidden rounded-xl border border-emerald-200 bg-white px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-emerald-700 shadow-sm md:block dark:border-emerald-900 dark:bg-slate-900 dark:text-emerald-300">Live spatial view</div>
+              <div className="absolute -right-3 -top-3 hidden rounded-xl border border-herb bg-pearl px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-herb shadow-sm md:block">Live spatial view</div>
               <MajithDEMVisualizer />
             </div>
           </div>
@@ -94,20 +94,20 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:divide-x md:divide-slate-700/80 text-center">
             <div className="space-y-1">
-              <p className="text-3xl font-extrabold text-sky-400">37+</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">GIS & Agri Projects</p>
+              <p className="text-3xl font-extrabold text-gleam">37+</p>
+              <p className="text-xs text-pearl/80 font-medium uppercase tracking-wider">GIS & Agri Projects</p>
             </div>
             <div className="space-y-1">
-              <p className="text-3xl font-extrabold text-sky-400">15,000+</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">Soil Samples Tested</p>
+              <p className="text-3xl font-extrabold text-gleam">15,000+</p>
+              <p className="text-xs text-pearl/80 font-medium uppercase tracking-wider">Soil Samples Tested</p>
             </div>
             <div className="space-y-1">
-              <p className="text-3xl font-extrabold text-emerald-400">2017</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">Established Year</p>
+              <p className="text-3xl font-extrabold text-gleam">2017</p>
+              <p className="text-xs text-pearl/80 font-medium uppercase tracking-wider">Established Year</p>
             </div>
             <div className="space-y-1">
-              <p className="text-3xl font-extrabold text-emerald-400">100%</p>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">Bundelkhand Commitment</p>
+              <p className="text-3xl font-extrabold text-gleam">100%</p>
+              <p className="text-xs text-pearl/80 font-medium uppercase tracking-wider">Bundelkhand Commitment</p>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
       {/* GIS MAPPING IN JHANSI 3D SHOWCASE */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-600">
+          <div className="inline-flex items-center gap-2 rounded-full border border-herb/30 bg-radiate/10 px-3 py-1 text-xs font-semibold text-herb">
             <Building2 className="h-3.5 w-3.5" />
             <span>Interactive Spatial Feature</span>
           </div>
@@ -135,14 +135,14 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-sky-500">What We Do</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-herb">What We Do</span>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">
               Agricultural & Spatial Expertise
             </h2>
           </div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-500 hover:text-sky-400"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-herb hover:text-gleam"
           >
             <span>View All Services</span>
             <ArrowRight className="h-4 w-4" />
@@ -156,10 +156,10 @@ export default function HomePage() {
               className="premium-card group relative flex flex-col justify-between rounded-2xl p-7"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center border border-sky-500/20 group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-xl bg-radiate/10 text-herb flex items-center justify-center border border-herb/20 group-hover:scale-110 transition-transform">
                   <Compass className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-herb transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -168,7 +168,7 @@ export default function HomePage() {
                 <ul className="space-y-1.5 text-xs text-slate-500 dark:text-slate-400">
                   {service.features.slice(0, 3).map((f, i) => (
                     <li key={i} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-gleam" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -178,7 +178,7 @@ export default function HomePage() {
               <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition-transform"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-herb dark:text-gleam group-hover:translate-x-1 transition-transform"
                 >
                   <span>Learn More</span>
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -195,7 +195,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Leadership Details */}
             <div className="lg:col-span-8 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/20 px-3 py-1 text-xs font-semibold text-sky-300 border border-sky-500/30">
+              <div className="inline-flex items-center gap-2 rounded-full bg-radiate/20 px-3 py-1 text-xs font-semibold text-gleam border border-herb/30">
                 <span>Society Leadership</span>
               </div>
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-white">
@@ -203,13 +203,13 @@ export default function HomePage() {
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                <div className="rounded-2xl bg-slate-900/90 border border-sky-500/30 p-5 space-y-3 relative overflow-hidden">
+                <div className="rounded-2xl bg-slate-900/90 border border-herb/30 p-5 space-y-3 relative overflow-hidden">
                   <div className="flex items-center gap-4">
                     <DirectorAvatar size="md" />
                     <div>
-                      <h3 className="font-bold text-lg text-sky-300">Rakhi Devi</h3>
+                      <h3 className="font-bold text-lg text-gleam">Rakhi Devi</h3>
                       <p className="text-xs text-slate-300 font-medium">Director</p>
-                      <span className="inline-block mt-1 rounded bg-sky-500/20 px-2 py-0.5 text-[10px] font-semibold text-sky-200 border border-sky-500/30">
+                      <span className="inline-block mt-1 rounded bg-radiate/20 px-2 py-0.5 text-[10px] font-semibold text-gleam border border-herb/30">
                         Director
                       </span>
                     </div>
@@ -217,7 +217,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-5 space-y-2">
-                  <h3 className="font-bold text-lg text-sky-400">Anil Kumar Shukla</h3>
+                  <h3 className="font-bold text-lg text-gleam">Anil Kumar Shukla</h3>
                   <p className="text-xs text-slate-300 font-medium">Program Director & GIS Lead</p>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
 
             {/* NGO Registration & Contact Direct Callout */}
             <div className="lg:col-span-4 rounded-2xl bg-slate-900 border border-slate-800 p-6 space-y-4 text-center">
-              <Compass className="h-12 w-12 text-sky-400 mx-auto" />
+              <Compass className="h-12 w-12 text-gleam mx-auto" />
               <h4 className="font-bold text-base text-white">Headquarters Contact</h4>
               <p className="text-xs text-slate-400">
                 K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003
@@ -233,7 +233,7 @@ export default function HomePage() {
               <div className="pt-2">
                 <a
                   href="tel:+919415504335"
-                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-semibold text-white hover:bg-emerald-500 transition w-full justify-center"
+                  className="inline-flex items-center gap-2 rounded-xl bg-radiate px-4 py-2.5 text-xs font-semibold text-moss hover:bg-gleam transition w-full justify-center"
                 >
                   <Phone className="h-4 w-4" />
                   <span>Call 91-9415504335</span>
@@ -248,12 +248,12 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-sky-600">Track Record</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-herb">Track Record</span>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">
               Key Projects Handled
             </h2>
           </div>
-          <Link href="/about#projects" className="text-xs font-semibold text-sky-500 hover:underline">
+          <Link href="/about#projects" className="text-xs font-semibold text-herb hover:underline">
             View All 37+ Projects →
           </Link>
         </div>
@@ -272,7 +272,7 @@ export default function HomePage() {
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               {featuredProjects.map((p) => (
                 <tr key={p.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                  <td className="p-4 font-mono font-bold text-sky-500">{p.sn}</td>
+                  <td className="p-4 font-mono font-bold text-herb">{p.sn}</td>
                   <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">{p.name}</td>
                   <td className="p-4 text-slate-600 dark:text-slate-400">{p.funder}</td>
                   <td className="p-4 font-mono text-slate-500">{p.period}</td>
@@ -288,12 +288,12 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-500">Publications</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-herb">Publications</span>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">
               GIS & Agricultural Articles
             </h2>
           </div>
-          <Link href="/blog" className="text-xs font-semibold text-sky-500 hover:underline">
+          <Link href="/blog" className="text-xs font-semibold text-herb hover:underline">
             Browse All Articles →
           </Link>
         </div>
@@ -305,11 +305,11 @@ export default function HomePage() {
               className="premium-card flex flex-col justify-between overflow-hidden rounded-2xl"
             >
               <div className="p-6 space-y-3">
-                <span className="inline-block rounded-md bg-sky-500/10 px-2.5 py-1 text-[10px] font-bold text-sky-600 dark:text-sky-400">
+                <span className="inline-block rounded-md bg-radiate/10 px-2.5 py-1 text-[10px] font-bold text-herb dark:text-gleam">
                   {blog.category}
                 </span>
                 <h3 className="text-base font-bold text-slate-900 dark:text-white line-clamp-2">
-                  <Link href={`/blog/${blog.slug}`} className="hover:text-sky-500 transition">
+                  <Link href={`/blog/${blog.slug}`} className="hover:text-herb transition">
                     {blog.title}
                   </Link>
                 </h3>
@@ -329,17 +329,17 @@ export default function HomePage() {
 
       {/* CTA BANNER */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="agri-dark-panel rounded-3xl p-8 text-center text-white sm:p-12 space-y-6">
+        <div className="rounded-3xl bg-herb p-8 text-center text-pearl shadow-xl sm:p-12 space-y-6">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Need Expert GIS Mapping or Soil Testing in Jhansi?
           </h2>
-          <p className="max-w-2xl mx-auto text-sm text-sky-100 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-sm text-pearl/85 leading-relaxed">
             Contact Remote Sensing Agriculture Knowledge Help Integral Society for government DPR preparation, satellite topography surveys, and soil fertility cards.
           </p>
           <div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-xs font-bold text-slate-900 shadow-md hover:bg-slate-100 transition"
+              className="inline-flex items-center gap-2 rounded-xl bg-radiate px-6 py-3 text-xs font-bold text-moss shadow-md hover:bg-gleam transition"
             >
               <span>Get In Touch Now</span>
               <ArrowRight className="h-4 w-4" />

@@ -33,12 +33,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Admin Sidebar */}
       <aside className="w-full md:w-64 border-r border-slate-800 bg-slate-900 p-6 space-y-6 flex-shrink-0 text-slate-100">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-600 text-white">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-radiate text-white">
             <ShieldCheck className="h-5 w-5" />
           </div>
           <div>
             <h2 className="font-bold text-sm text-white">Client Admin CMS</h2>
-            <p className="text-[10px] text-sky-300 font-mono">RSAK Society Jhansi</p>
+            <p className="text-[10px] text-gleam font-mono">RSAK Society Jhansi</p>
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 href={item.href}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold transition ${
                   active
-                    ? "bg-sky-600 text-white shadow-md"
+                    ? "bg-radiate text-white shadow-md"
                     : "text-slate-300 hover:bg-slate-800 hover:text-white"
                 }`}
               >

@@ -37,7 +37,7 @@ export default function ServicesPage() {
     <div className="agri-page space-y-16 pb-24 pt-12">
       {/* Page Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-500 border border-sky-500/20">
+        <div className="inline-flex items-center gap-2 rounded-full bg-radiate/10 px-3.5 py-1 text-xs font-semibold text-herb border border-herb/20">
           <Compass className="h-3.5 w-3.5" />
           <span>Our Technical Capabilities</span>
         </div>
@@ -57,14 +57,14 @@ export default function ServicesPage() {
             placeholder="Search services (e.g. GIS, Soil, Watershed)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pl-10 pr-4 py-3 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm"
+            className="w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pl-10 pr-4 py-3 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-herb shadow-sm"
           />
         </div>
 
         <a
           href="/documents/rsak-gis-services-profile.pdf"
           download
-          className="mt-5 inline-flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-500/10 px-4 py-2.5 text-xs font-semibold text-sky-600 transition hover:bg-sky-500 hover:text-white dark:text-sky-400"
+          className="mt-5 inline-flex items-center gap-2 rounded-xl border border-herb/30 bg-radiate/10 px-4 py-2.5 text-xs font-semibold text-herb transition hover:bg-radiate hover:text-white dark:text-gleam"
         >
           <FileDown className="h-4 w-4" />
           <span>Download GIS Services Profile (PDF)</span>
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         <div className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 p-6 text-white shadow-lg sm:p-8">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300">RSAK Society</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gleam">RSAK Society</p>
               <h2 className="mt-2 text-2xl font-extrabold sm:text-3xl">GIS &amp; Remote Sensing Services Profile</h2>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300">
                 Advanced mapping, survey, spatial analysis, and terrain-modeling services for planning, agriculture, and sustainable watershed development.
@@ -85,20 +85,20 @@ export default function ServicesPage() {
 
             <div className="grid gap-3 text-xs text-slate-200 sm:grid-cols-2 lg:col-span-5">
               <div className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sky-300" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gleam" />
                 <span><strong className="text-white">Registered Office:</strong> {siteConfig.registeredOffice}</span>
               </div>
               <div className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sky-400" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gleam" />
                 <span><strong className="text-white">Jhansi Office:</strong> {siteConfig.address}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 shrink-0 text-emerald-400" />
-                <a href={`tel:${siteConfig.phone}`} className="hover:text-sky-300">{siteConfig.phone}</a>
+                <Phone className="h-4 w-4 shrink-0 text-herb" />
+                <a href={`tel:${siteConfig.phone}`} className="hover:text-gleam">{siteConfig.phone}</a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="h-4 w-4 shrink-0 text-emerald-400" />
-                <a href={`mailto:${siteConfig.email}`} className="break-all hover:text-sky-300">{siteConfig.email}</a>
+                <Mail className="h-4 w-4 shrink-0 text-herb" />
+                <a href={`mailto:${siteConfig.email}`} className="break-all hover:text-gleam">{siteConfig.email}</a>
               </div>
             </div>
           </div>
@@ -110,19 +110,19 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
           <aside className="premium-card self-start rounded-3xl p-6 lg:col-span-4">
             <div className="mb-5 flex items-center gap-3 border-b border-slate-100 pb-5 dark:border-slate-800">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-sky-500">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-radiate">
                 <Map className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-sky-600">We Are Offering</p>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-herb">We Are Offering</p>
                 <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">Our GIS Services</h2>
               </div>
             </div>
             <ul className="space-y-1">
               {gisMappingOfferings.map((offering) => (
                 <li key={offering}>
-                  <a href="#service-cards" className="group flex items-center gap-2 rounded-lg px-2 py-2 text-xs font-medium text-slate-600 transition hover:bg-sky-500/10 hover:text-sky-600 dark:text-slate-300 dark:hover:text-sky-400">
-                    <ChevronRight className="h-3.5 w-3.5 shrink-0 text-sky-600 transition-transform group-hover:translate-x-1" />
+                  <a href="#service-cards" className="group flex items-center gap-2 rounded-lg px-2 py-2 text-xs font-medium text-slate-600 transition hover:bg-radiate/10 hover:text-herb dark:text-slate-300 dark:hover:text-gleam">
+                    <ChevronRight className="h-3.5 w-3.5 shrink-0 text-herb transition-transform group-hover:translate-x-1" />
                     <span>{offering}</span>
                   </a>
                 </li>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
           <div className="space-y-8 lg:col-span-8">
             <div>
               <div className="mb-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">Project Visualizations</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-herb">Project Visualizations</p>
                 <h2 className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">Remote Sensing &amp; GIS Solutions</h2>
               </div>
               <div id="map-visualizations" className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -143,7 +143,7 @@ export default function ServicesPage() {
 
             <div>
               <div className="mb-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-500">Technical Capabilities</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-herb">Technical Capabilities</p>
                 <h2 className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">Detailed Service Specifications</h2>
               </div>
               <div id="service-cards" className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -155,10 +155,10 @@ export default function ServicesPage() {
                   >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="inline-block rounded-lg bg-sky-500/10 px-3 py-1 text-xs font-bold text-sky-500">
+                    <span className="inline-block rounded-lg bg-radiate/10 px-3 py-1 text-xs font-bold text-herb">
                       {service.category}
                     </span>
-                    <ShieldCheck className="h-5 w-5 text-emerald-500" />
+                    <ShieldCheck className="h-5 w-5 text-herb" />
                   </div>
 
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">{service.title}</h3>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
                     <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
                       {service.features.map((f, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-sky-500" />
+                          <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-herb" />
                           <span>{f}</span>
                         </li>
                       ))}
@@ -178,12 +178,12 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="flex items-center justify-between border-t border-slate-100 pt-6 dark:border-slate-800">
-                  <button onClick={() => setSelectedService(service)} className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 px-4 py-2 text-xs font-semibold text-slate-900 transition hover:bg-sky-500 hover:text-white dark:bg-slate-800 dark:text-white">
+                  <button onClick={() => setSelectedService(service)} className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 px-4 py-2 text-xs font-semibold text-slate-900 transition hover:bg-radiate hover:text-white dark:bg-slate-800 dark:text-white">
                     <span>Full Specification</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </button>
 
-                  <Link href="/contact" className="text-xs font-semibold text-sky-500 hover:underline">Request Proposal</Link>
+                  <Link href="/contact" className="text-xs font-semibold text-herb hover:underline">Request Proposal</Link>
                 </div>
                   </div>
                 ))}
@@ -204,7 +204,7 @@ export default function ServicesPage() {
               <X className="h-5 w-5" />
             </button>
 
-            <span className="inline-block rounded-lg bg-sky-500/10 px-3 py-1 text-xs font-bold text-sky-500">
+            <span className="inline-block rounded-lg bg-radiate/10 px-3 py-1 text-xs font-bold text-herb">
               {selectedService.category}
             </span>
 
@@ -223,7 +223,7 @@ export default function ServicesPage() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 dark:text-slate-300">
                 {selectedService.features.map((f, i) => (
                   <li key={i} className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                    <CheckCircle2 className="h-4 w-4 text-herb" />
                     <span>{f}</span>
                   </li>
                 ))}
@@ -240,7 +240,7 @@ export default function ServicesPage() {
               <Link
                 href="/contact"
                 onClick={() => setSelectedService(null)}
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-2 text-xs font-semibold text-white hover:bg-sky-500 transition shadow-md"
+                className="inline-flex items-center gap-2 rounded-xl bg-radiate px-5 py-2 text-xs font-semibold text-white hover:bg-radiate transition shadow-md"
               >
                 <span>Inquire About This Service</span>
                 <ArrowRight className="h-4 w-4" />

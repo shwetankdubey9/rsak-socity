@@ -21,12 +21,12 @@ export default function AdminDashboardPage() {
         <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2 shadow-sm">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Total Projects</span>
-            <FolderGit2 className="h-5 w-5 text-sky-500" />
+            <FolderGit2 className="h-5 w-5 text-herb" />
           </div>
           <p className="text-3xl font-extrabold text-slate-900 dark:text-white">
             {initialProjects.length}
           </p>
-          <Link href="/admin/projects" className="text-[11px] font-semibold text-sky-500 hover:underline inline-block">
+          <Link href="/admin/projects" className="text-[11px] font-semibold text-herb hover:underline inline-block">
             Manage & Edit Projects →
           </Link>
         </div>
@@ -34,12 +34,12 @@ export default function AdminDashboardPage() {
         <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2 shadow-sm">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Active Services</span>
-            <Layers className="h-5 w-5 text-emerald-500" />
+            <Layers className="h-5 w-5 text-herb" />
           </div>
           <p className="text-3xl font-extrabold text-slate-900 dark:text-white">
             {initialServices.length}
           </p>
-          <Link href="/admin/services" className="text-[11px] font-semibold text-emerald-500 hover:underline inline-block">
+          <Link href="/admin/services" className="text-[11px] font-semibold text-herb hover:underline inline-block">
             Manage Services →
           </Link>
         </div>
@@ -47,12 +47,12 @@ export default function AdminDashboardPage() {
         <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2 shadow-sm">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Gallery Assets</span>
-            <ImageIcon className="h-5 w-5 text-pink-500" />
+            <ImageIcon className="h-5 w-5 text-radiate" />
           </div>
           <p className="text-3xl font-extrabold text-slate-900 dark:text-white">
             {initialGallery.length}
           </p>
-          <Link href="/admin/gallery" className="text-[11px] font-semibold text-pink-500 hover:underline inline-block">
+          <Link href="/admin/gallery" className="text-[11px] font-semibold text-radiate hover:underline inline-block">
             Upload & Edit Photos →
           </Link>
         </div>
@@ -79,7 +79,7 @@ export default function AdminDashboardPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             href="/admin/gallery"
-            className="flex items-center justify-between rounded-xl bg-pink-500/10 border border-pink-500/20 p-4 text-pink-600 dark:text-pink-400 font-semibold text-xs hover:bg-pink-500/20 transition"
+            className="flex items-center justify-between rounded-xl bg-radiate/10 border border-radiate/20 p-4 text-pink-600 dark:text-gleam font-semibold text-xs hover:bg-radiate/20 transition"
           >
             <span>Upload New Gallery Image</span>
             <Plus className="h-4 w-4" />
@@ -87,7 +87,7 @@ export default function AdminDashboardPage() {
 
           <Link
             href="/admin/projects"
-            className="flex items-center justify-between rounded-xl bg-sky-500/10 border border-sky-500/20 p-4 text-sky-600 dark:text-sky-400 font-semibold text-xs hover:bg-sky-500/20 transition"
+            className="flex items-center justify-between rounded-xl bg-radiate/10 border border-herb/20 p-4 text-herb dark:text-gleam font-semibold text-xs hover:bg-radiate/20 transition"
           >
             <span>Add / Edit GIS Project</span>
             <Plus className="h-4 w-4" />

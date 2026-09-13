@@ -51,7 +51,7 @@ export default function ContactPage() {
     <div className="agri-page space-y-16 pb-24 pt-12">
       {/* Header */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-500 border border-sky-500/20">
+        <div className="inline-flex items-center gap-2 rounded-full bg-radiate/10 px-3.5 py-1 text-xs font-semibold text-herb border border-herb/20">
           <Compass className="h-3.5 w-3.5" />
           <span>Jhansi Office Contact</span>
         </div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
               <div className="space-y-4 text-xs">
                 <div className="flex items-start gap-3">
-                  <div className="h-9 w-9 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-radiate/10 text-herb flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="h-9 w-9 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-herb/10 text-herb flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -94,26 +94,26 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="h-9 w-9 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-radiate/10 text-herb flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white">Telephones</h3>
                     <p className="text-slate-600 dark:text-slate-400 mt-0.5">
-                      <a href="tel:+919415504335" className="hover:text-sky-500">{siteConfig.phone}</a>
+                      <a href="tel:+919415504335" className="hover:text-herb">{siteConfig.phone}</a>
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="h-9 w-9 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-xl bg-herb/10 text-herb flex items-center justify-center flex-shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white">Official Emails</h3>
                     <p className="text-slate-600 dark:text-slate-400 mt-0.5 space-y-0.5">
-                      <a href={`mailto:${siteConfig.email}`} className="block hover:text-emerald-500">{siteConfig.email}</a>
-                      <a href={`mailto:${siteConfig.emailAlt}`} className="block hover:text-emerald-500">{siteConfig.emailAlt}</a>
+                      <a href={`mailto:${siteConfig.email}`} className="block hover:text-herb">{siteConfig.email}</a>
+                      <a href={`mailto:${siteConfig.emailAlt}`} className="block hover:text-herb">{siteConfig.emailAlt}</a>
                     </p>
                   </div>
                 </div>
@@ -140,12 +140,12 @@ export default function ContactPage() {
               <div className="border-t border-slate-100 pt-4 dark:border-slate-800">
                 <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Connect with us</p>
                 <div className="flex flex-wrap gap-2">
-                  <a href={siteConfig.social.x} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-700 transition hover:bg-sky-600 hover:text-white dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-300">
+                  <a href={siteConfig.social.x} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-herb bg-pearl px-3 py-2 text-xs font-semibold text-moss transition hover:bg-radiate hover:text-white dark:border-herb dark:bg-moss/40 dark:text-gleam">
                     <span aria-hidden="true" className="font-bold">𝕏</span>
                     <span>Follow on X</span>
                     <ExternalLink className="h-3 w-3" />
                   </a>
-                  <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-700 transition hover:bg-sky-600 hover:text-white dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-300">
+                  <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-herb bg-pearl px-3 py-2 text-xs font-semibold text-moss transition hover:bg-radiate hover:text-white dark:border-herb dark:bg-moss/40 dark:text-gleam">
                     <span aria-hidden="true" className="font-bold">f</span>
                     <span>Follow on Facebook</span>
                     <ExternalLink className="h-3 w-3" />
@@ -161,7 +161,7 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">Send Us a Direct Message</h2>
 
               {status === "success" && (
-                <div className="flex items-center gap-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 p-4 text-emerald-600 dark:text-emerald-400 text-xs font-medium">
+                <div className="flex items-center gap-3 rounded-2xl bg-herb/10 border border-herb/30 p-4 text-herb dark:text-herb text-xs font-medium">
                   <CheckCircle2 className="h-5 w-5 flex-shrink-0" />
                   <span>Thank you! Your message has been transmitted successfully. Our Jhansi office team will respond shortly.</span>
                 </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                       placeholder="e.g. Ramesh Kumar"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                     />
                   </div>
 
@@ -200,7 +200,7 @@ export default function ContactPage() {
                       placeholder="name@domain.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                     />
                   </div>
                 </div>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                       placeholder="+91 9876543210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                     />
                   </div>
 
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                     >
                       {subjectInterests.map((interest) => <option key={interest} value={interest}>{interest}</option>)}
                     </select>
@@ -243,14 +243,14 @@ export default function ContactPage() {
                     placeholder="Describe your location, project scope, or soil testing requirements..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-600 px-6 py-3 text-xs font-bold text-white hover:bg-sky-500 transition shadow-md w-full disabled:opacity-50"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-radiate px-6 py-3 text-xs font-bold text-white hover:bg-radiate transition shadow-md w-full disabled:opacity-50"
                 >
                   <Send className="h-4 w-4" />
                   <span>{status === "submitting" ? "Transmitting..." : "Send Message"}</span>

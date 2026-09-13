@@ -14,8 +14,8 @@ export default function MajithDEMVisualizer() {
       {/* Visualizer Top Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 bg-slate-950/80 px-4 py-3 backdrop-blur-md">
         <div className="flex items-center gap-2">
-          <div className="h-3 w-3 rounded-full bg-emerald-500 animate-ping" />
-          <span className="font-mono text-xs font-semibold tracking-wider text-emerald-400 uppercase">
+          <div className="h-3 w-3 rounded-full bg-herb animate-ping" />
+          <span className="font-mono text-xs font-semibold tracking-wider text-herb uppercase">
             Majith DEM Topography Visualizer
           </span>
         </div>
@@ -119,8 +119,8 @@ export default function MajithDEMVisualizer() {
 
             {/* Simulated GPS Sampling Markers */}
             <g>
-              <circle cx="360" cy="330" r="5" fill="#38bdf8" className="animate-ping" />
-              <circle cx="360" cy="330" r="4" fill="#0284c7" />
+              <circle cx="360" cy="330" r="5" fill="#FFE787" className="animate-ping" />
+              <circle cx="360" cy="330" r="4" fill="#ED7A13" />
               <text x="370" y="335" fill="#ffffff" fontSize="12" fontFamily="monospace">Node-A (Stream)</text>
 
               <circle cx="420" cy="270" r="5" fill="#f43f5e" className="animate-ping" />
@@ -133,7 +133,7 @@ export default function MajithDEMVisualizer() {
         {/* Legend Box */}
         <div className="absolute bottom-4 left-4 rounded-xl bg-slate-900/90 border border-slate-800 p-3 backdrop-blur-md text-xs space-y-2">
           <div className="flex items-center gap-1.5 font-semibold text-slate-200">
-            <Info className="h-3.5 w-3.5 text-sky-400" />
+            <Info className="h-3.5 w-3.5 text-gleam" />
             <span>Majith DEM Elevation Legend</span>
           </div>
           <div className="h-3 w-48 rounded bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-emerald-500 to-yellow-400" />
@@ -148,7 +148,7 @@ export default function MajithDEMVisualizer() {
       {/* Visualizer Controls Footer */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-800 bg-slate-950 px-4 py-3 text-xs">
         <div className="flex items-center gap-2">
-          <Layers className="h-4 w-4 text-sky-400" />
+          <Layers className="h-4 w-4 text-gleam" />
           <span className="text-slate-400">Color Spectrum:</span>
           <div className="flex rounded-lg bg-slate-900 p-1 border border-slate-800">
             <button
@@ -165,7 +165,7 @@ export default function MajithDEMVisualizer() {
               onClick={() => setColorPalette("terrain")}
               className={`px-2 py-1 rounded text-xs transition ${
                 colorPalette === "terrain"
-                  ? "bg-emerald-600 text-white font-medium"
+                  ? "bg-herb text-pearl font-medium"
                   : "text-slate-400 hover:text-white"
               }`}
             >
@@ -189,7 +189,7 @@ export default function MajithDEMVisualizer() {
             onClick={() => setShowContours(!showContours)}
             className="flex items-center gap-1.5 rounded-lg bg-slate-900 px-3 py-1.5 border border-slate-800 text-slate-300 hover:text-white transition"
           >
-            <Eye className="h-3.5 w-3.5 text-emerald-400" />
+            <Eye className="h-3.5 w-3.5 text-herb" />
             <span>{showContours ? "Hide Contours" : "Show Contours"}</span>
           </button>
           <button

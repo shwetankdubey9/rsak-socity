@@ -30,7 +30,7 @@ export default function Error({
         </div>
         <button
           onClick={() => reset()}
-          className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-2.5 text-xs font-semibold text-white hover:bg-sky-500 transition shadow-md"
+          className="inline-flex items-center gap-2 rounded-xl bg-radiate px-5 py-2.5 text-xs font-semibold text-white hover:bg-radiate transition shadow-md"
         >
           <RefreshCw className="h-4 w-4" />
           <span>Reload Application Layer</span>

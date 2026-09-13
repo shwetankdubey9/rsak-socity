@@ -111,7 +111,7 @@ export default function AdminGalleryPage() {
         </div>
         <button
           onClick={openCreateModal}
-          className="inline-flex items-center gap-2 rounded-xl bg-pink-600 px-4 py-2.5 text-xs font-bold text-white hover:bg-pink-500 transition shadow-md"
+          className="inline-flex items-center gap-2 rounded-xl bg-radiate px-4 py-2.5 text-xs font-bold text-white hover:bg-radiate transition shadow-md"
         >
           <Plus className="h-4 w-4" />
           <span>Upload & Add Photo</span>
@@ -130,7 +130,7 @@ export default function AdminGalleryPage() {
             </div>
 
             <div className="p-4 space-y-2">
-              <span className="inline-block rounded bg-pink-500/10 px-2 py-0.5 text-[10px] font-bold text-pink-500">
+              <span className="inline-block rounded bg-radiate/10 px-2 py-0.5 text-[10px] font-bold text-radiate">
                 {item.category}
               </span>
               <h3 className="font-bold text-sm text-slate-900 dark:text-white line-clamp-1">
@@ -146,7 +146,7 @@ export default function AdminGalleryPage() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => openEditModal(item)}
-                  className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-sky-500"
+                  className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-herb"
                 >
                   <Edit className="h-3.5 w-3.5" />
                 </button>
@@ -184,9 +184,9 @@ export default function AdminGalleryPage() {
                   type="file"
                   accept="image/*"
                   onChange={handleFileUpload}
-                  className="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-sky-500/10 file:text-sky-500"
+                  className="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-radiate/10 file:text-herb"
                 />
-                {isUploading && <p className="text-[10px] text-sky-400 font-mono">Uploading image to Cloudinary...</p>}
+                {isUploading && <p className="text-[10px] text-gleam font-mono">Uploading image to Cloudinary...</p>}
               </div>
 
               <div className="space-y-1">
@@ -235,7 +235,7 @@ export default function AdminGalleryPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-xl bg-pink-600 text-xs font-bold text-white hover:bg-pink-500"
+                  className="px-4 py-2 rounded-xl bg-radiate text-xs font-bold text-white hover:bg-radiate"
                 >
                   Save Gallery Asset
                 </button>

@@ -39,8 +39,8 @@ export default function AdminLoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-16">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-3">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-600 p-0.5 shadow-sm">
-            <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-slate-950 text-sky-400">
+          <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-radiate p-0.5 shadow-sm">
+            <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-slate-950 text-gleam">
               <ShieldCheck className="h-7 w-7" />
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function AdminLoginPage() {
         </div>
 
         <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-xl space-y-6">
-          <div className="rounded-2xl bg-sky-500/10 border border-sky-500/20 p-3 text-[11px] text-sky-600 dark:text-sky-400 space-y-1">
+          <div className="rounded-2xl bg-radiate/10 border border-herb/20 p-3 text-[11px] text-herb dark:text-gleam space-y-1">
             <p className="font-bold flex items-center gap-1">
               <CheckCircle2 className="h-3.5 w-3.5" /> Demo Login Credentials Pre-Filled:
             </p>
@@ -78,7 +78,7 @@ export default function AdminLoginPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 pl-10 pr-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 pl-10 pr-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                 />
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function AdminLoginPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 pl-10 pr-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 pl-10 pr-4 py-2.5 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-herb focus:outline-none"
                 />
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-600 px-6 py-3 text-xs font-bold text-white hover:bg-sky-500 transition shadow-md w-full disabled:opacity-50"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-radiate px-6 py-3 text-xs font-bold text-white hover:bg-radiate transition shadow-md w-full disabled:opacity-50"
             >
               <span>{loading ? "Authenticating..." : "Sign In to CMS"}</span>
               <ArrowRight className="h-4 w-4" />
