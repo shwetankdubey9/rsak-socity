@@ -26,9 +26,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 shadow-[0_1px_0_rgba(15,23,42,0.03)] dark:border-slate-800/80 dark:bg-slate-950/90 backdrop-blur-xl transition-colors">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-800 bg-slate-900 text-white shadow-[0_2px_14px_rgba(11,31,58,0.16)] backdrop-blur-xl transition-colors">
       {/* Top Telemetry Notification Bar */}
-      <div className="hidden md:flex items-center justify-between border-b border-slate-200/50 dark:border-slate-800/50 bg-slate-900 px-6 py-1.5 text-xs text-slate-300">
+      <div className="hidden md:flex items-center justify-between border-b border-slate-800 bg-slate-950 px-6 py-1.5 text-xs text-slate-300">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
             <MapPin className="h-3.5 w-3.5 text-pink-400" />
@@ -68,10 +68,10 @@ export default function Navbar() {
             </div>
           </div>
           <div>
-            <span className="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
+            <span className="font-bold text-base sm:text-lg tracking-tight text-white">
               RAKHI-Society
             </span>
-            <span className="block text-[10px] font-medium text-slate-500 dark:text-slate-400 tracking-wide uppercase">
+            <span className="block text-[10px] font-medium text-sky-300 tracking-wide uppercase">
               Remote Sensing & GIS • Jhansi
             </span>
           </div>
@@ -85,8 +85,8 @@ export default function Navbar() {
               href={link.href}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 isActive(link.href)
-                  ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 font-semibold"
-                  : "text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-900"
+                  ? "bg-sky-500/15 text-sky-300 font-semibold"
+                  : "text-slate-200 hover:text-white hover:bg-slate-800"
               }`}
             >
               {link.name}
@@ -100,7 +100,7 @@ export default function Navbar() {
 
           <Link
             href="/admin"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-sky-50 border border-sky-200 px-3.5 py-2 text-xs font-bold text-sky-700 hover:bg-sky-600 hover:text-white transition-colors shadow-sm"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-xl border border-sky-400/50 bg-sky-500/10 px-3.5 py-2 text-xs font-bold text-sky-300 hover:bg-sky-600 hover:text-white transition-colors"
           >
             <ShieldCheck className="h-4 w-4" />
             <span>Upload & Edit CMS</span>
@@ -115,7 +115,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="inline-flex lg:hidden items-center justify-center rounded-lg p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 transition"
+            className="inline-flex lg:hidden items-center justify-center rounded-lg p-2 text-slate-200 hover:bg-slate-800 transition"
             aria-label="Toggle Menu"
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -125,7 +125,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Dropdown */}
       {mobileOpen && (
-        <div className="lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 px-4 pt-2 pb-6 backdrop-blur-lg">
+        <div className="lg:hidden border-b border-slate-800 bg-slate-900 px-4 pt-2 pb-6 backdrop-blur-lg">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <Link
@@ -134,25 +134,25 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
                   isActive(link.href)
-                    ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 font-semibold"
-                    : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900"
+                    ? "bg-sky-500/15 text-sky-300 font-semibold"
+                    : "text-slate-200 hover:bg-slate-800"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+            <div className="pt-4 border-t border-slate-800 space-y-2">
               <Link
                 href="/admin"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-sky-500"
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-200 hover:text-sky-300"
               >
                 <ShieldCheck className="h-4 w-4 text-sky-500" />
                 Admin Dashboard & CMS
               </Link>
               <a
                 href="tel:+919415504335"
-                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-emerald-600 dark:text-emerald-400"
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-emerald-400"
               >
                 <Phone className="h-4 w-4" />
                 Call 91-9415504335

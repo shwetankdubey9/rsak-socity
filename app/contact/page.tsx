@@ -136,6 +136,22 @@ export default function ContactPage() {
                 <span>Open Google Maps Link</span>
                 <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
               </a>
+
+              <div className="border-t border-slate-100 pt-4 dark:border-slate-800">
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Connect with us</p>
+                <div className="flex flex-wrap gap-2">
+                  <a href={siteConfig.social.x} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-700 transition hover:bg-sky-600 hover:text-white dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-300">
+                    <span aria-hidden="true" className="font-bold">𝕏</span>
+                    <span>Follow on X</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                  <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-700 transition hover:bg-sky-600 hover:text-white dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-300">
+                    <span aria-hidden="true" className="font-bold">f</span>
+                    <span>Follow on Facebook</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

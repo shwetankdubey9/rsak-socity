@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-slate-800 bg-slate-950 text-slate-300">
+    <footer className="w-full border-t border-slate-800 bg-slate-900 text-slate-300">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Col 1: NGO Summary */}
@@ -118,10 +118,38 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-slate-800 border border-slate-700 px-4 py-2.5 text-xs font-semibold text-white hover:bg-slate-700 hover:border-slate-600 transition"
             >
-              <MapPin className="h-4 w-4 text-red-500" />
+              <MapPin className="h-4 w-4 text-sky-400" />
               <span>Open Google Maps Directions</span>
               <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
             </a>
+
+            <div className="pt-2">
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-sky-400">Follow RAKHI-Society</p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href={siteConfig.social.x}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow RAKHI-Society on X"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+                >
+                  <span aria-hidden="true" className="font-bold">𝕏</span>
+                  <span>X</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                <a
+                  href={siteConfig.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow RAKHI-Society on Facebook"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-semibold text-white transition hover:border-sky-400 hover:text-sky-400"
+                >
+                  <span aria-hidden="true" className="font-bold">f</span>
+                  <span>Facebook</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

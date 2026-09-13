@@ -34,6 +34,12 @@
   --color-emerald-500: #2e7d32;
   --color-emerald-600: #256c29;
   --color-emerald-700: #1b5e20;
+  --color-emerald-50: #f1f8f2;
+  --color-emerald-100: #dceddd;
+  --color-emerald-200: #b8d8bb;
+  --color-emerald-300: #81bd85;
+  --color-emerald-900: #173f1a;
+  --color-emerald-950: #0f2a12;
 
   /* Legacy accent utilities resolve to GIS blue rather than a competing brand color. */
   --color-pink-300: #7dd3fc;
@@ -223,6 +229,18 @@ body {
   border: 1px solid #bae6fd;
   background: var(--card);
   box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
+}
+
+/* Respect user motion preferences while retaining concise GIS micro-interactions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Pulse animation for active GIS telemetry nodes */

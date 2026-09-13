@@ -29,16 +29,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   ];
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row">
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 flex flex-col md:flex-row">
       {/* Admin Sidebar */}
-      <aside className="w-full md:w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-6 flex-shrink-0">
+      <aside className="w-full md:w-64 border-r border-slate-800 bg-slate-900 p-6 space-y-6 flex-shrink-0 text-slate-100">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-600 text-white">
             <ShieldCheck className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="font-bold text-sm text-slate-900 dark:text-white">Client Admin CMS</h2>
-            <p className="text-[10px] text-sky-500 font-mono">RSAK Society Jhansi</p>
+            <h2 className="font-bold text-sm text-white">Client Admin CMS</h2>
+            <p className="text-[10px] text-sky-300 font-mono">RSAK Society Jhansi</p>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold transition ${
                   active
                     ? "bg-sky-600 text-white shadow-md"
-                    : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    : "text-slate-300 hover:bg-slate-800 hover:text-white"
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -63,7 +63,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           })}
         </nav>
 
-        <div className="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-3">
+        <div className="pt-6 border-t border-slate-800 space-y-3">
           <div className="text-[11px] text-slate-400">
             Logged in as: <strong className="text-slate-200">Director / Admin</strong>
           </div>

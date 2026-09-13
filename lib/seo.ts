@@ -15,6 +15,10 @@ export const siteConfig = {
   email: "societyrakhi@gmail.com",
   emailAlt: "shuklaiirs@gmail.com",
   googleMapsUrl: "https://maps.app.goo.gl/qwfgucyRA9jyWygw7",
+  social: {
+    x: "https://x.com/RAKHI_Society",
+    facebook: "https://www.facebook.com/profile.php?id=61593969150446",
+  },
 };
 
 export function constructMetadata({
@@ -74,7 +78,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@RSAKSociety",
+      creator: "@RAKHI_Society",
     },
     icons,
     metadataBase: new URL(siteConfig.url),
@@ -121,6 +125,10 @@ export function generateOrganizationSchema() {
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"],
     },
-    sameAs: [siteConfig.googleMapsUrl],
+    sameAs: [
+      siteConfig.googleMapsUrl,
+      siteConfig.social.x,
+      siteConfig.social.facebook,
+    ],
   };
 }
