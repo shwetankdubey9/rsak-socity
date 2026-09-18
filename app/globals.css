@@ -15,12 +15,6 @@
   --color-slate-300: #6A8042;
   --color-slate-400: #6A8042;
   --color-slate-500: #6A8042;
-  --color-slate-600: #1E3006;
-  --color-slate-700: #1E3006;
-  --color-slate-800: #1E3006;
-  --color-slate-900: #1E3006;
-  --color-slate-950: #1E3006;
-
   --color-sky-50: #FFFADD;
   --color-sky-100: #FFE787;
   --color-sky-300: #FFE787;
@@ -72,9 +66,9 @@
   }
 
   .dark {
-    --background: #1E3006;
+    --background: #6A8042;
     --foreground: #FFFADD;
-    --card: #1E3006;
+    --card: #6A8042;
     --card-foreground: #FFFADD;
     --primary: #FFE787;
     --primary-foreground: #1E3006;
@@ -145,7 +139,7 @@ body {
 }
 
 .dark .premium-card {
-  background: #1E3006;
+  background: #6A8042;
   border-color: rgba(255, 250, 221, 0.22);
 }
 
@@ -168,7 +162,7 @@ body {
 .agri-dark-panel {
   position: relative;
   overflow: hidden;
-  background: #1E3006;
+  background: #6A8042;
   box-shadow: 0 18px 48px rgba(30, 48, 6, 0.22);
 }
 
@@ -211,7 +205,7 @@ body {
 }
 
 .dark .glass-panel {
-  background: rgba(30, 48, 6, 0.92);
+  background: rgba(106, 128, 66, 0.92);
   border: 1px solid rgba(255, 250, 221, 0.22);
 }
 
@@ -231,7 +225,7 @@ body {
 }
 
 .dark .corporate-panel {
-  background: #1E3006;
+  background: #6A8042;
   border-color: rgba(255, 250, 221, 0.22);
 }
 

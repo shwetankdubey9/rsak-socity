@@ -3,12 +3,12 @@ export interface ProjectItem {
   sn: number;
   name: string;
   funder: string;
-  amount: string;
   period: string;
   beneficiary: string;
-  category: 'GIS Mapping' | 'Soil Health' | 'Watershed' | 'Statics' | 'WDC' | 'Other';
+  category: 'GIS Mapping' | 'Soil Health' | 'Watershed' | 'Statics' | 'WDC' | 'Other' | 'Natural Farming / GIS';
   description?: string;
   imageUrl?: string;
+  pdfUrl?: string;
   isFeatured?: boolean;
 }
 

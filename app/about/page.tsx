@@ -136,6 +136,34 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Organization Branding */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="flex items-center gap-3">
+          <Compass className="h-6 w-6 text-herb" />
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+            Organization Branding
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+            <img
+              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.16.jpg"
+              alt="RSAKHI Society additional branding"
+              className="w-full h-auto object-contain rounded-lg"
+            />
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+            <img
+              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757883/WhatsApp_Image_2026-09-19_at_00.26.13.jpg"
+              alt="RSAKHI Society additional branding"
+              className="w-full h-auto object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Equipment & Infrastructure */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex items-center gap-3">
@@ -197,7 +225,6 @@ export default function AboutPage() {
                 <th className="p-4">S.N.</th>
                 <th className="p-4">Name of the Project</th>
                 <th className="p-4">Funder / Partner</th>
-                <th className="p-4">Amount</th>
                 <th className="p-4">Period</th>
                 <th className="p-4">Beneficiary Region</th>
               </tr>
@@ -206,9 +233,15 @@ export default function AboutPage() {
               {initialProjects.map((p) => (
                 <tr key={p.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                   <td className="p-4 font-mono font-bold text-herb">{p.sn}</td>
-                  <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">{p.name}</td>
+                  <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">
+                    {p.name}
+                    {p.pdfUrl && (
+                      <a href={p.pdfUrl} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex items-center gap-1 rounded bg-radiate/10 px-2 py-0.5 text-[10px] font-bold text-herb hover:bg-radiate hover:text-white transition">
+                        PDF
+                      </a>
+                    )}
+                  </td>
                   <td className="p-4 text-slate-600 dark:text-slate-400">{p.funder}</td>
-                  <td className="p-4 font-mono text-herb dark:text-herb">{p.amount || "-"}</td>
                   <td className="p-4 font-mono text-slate-500">{p.period}</td>
                   <td className="p-4 text-slate-600 dark:text-slate-300">{p.beneficiary}</td>
                 </tr>

@@ -105,6 +105,99 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* GIS & Remote Sensing Visual Showcase */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-herb/30 bg-radiate/10 px-3 py-1 text-xs font-semibold text-herb">
+            <Map className="h-3.5 w-3.5" />
+            <span>GIS & Remote Sensing</span>
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            Geospatial Mapping Capabilities
+          </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
+            Examples of geomorphology mapping and 3D terrain visualization using advanced GIS technology.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="premium-card rounded-2xl overflow-hidden">
+            <div className="relative h-64 bg-slate-100 dark:bg-slate-950">
+              <img
+                src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789759096/geomorphology_map_extracted.png"
+                alt="Geomorphology map generated using GIS"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Geomorphology Mapping</h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
+                Detailed terrain analysis and landform classification using satellite imagery and GIS processing.
+              </p>
+            </div>
+          </div>
+
+          <div className="premium-card rounded-2xl overflow-hidden">
+            <div className="relative h-64 bg-slate-100 dark:bg-slate-950">
+              <img
+                src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789759096/3d_terrain_graph_extracted.png"
+                alt="3D terrain visualization using GIS"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">3D Terrain / GIS Visualization</h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-2">
+                Three-dimensional terrain modeling and elevation analysis for watershed and planning applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Natural Farming Document Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="premium-card rounded-3xl p-8 lg:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-radiate/10 px-3 py-1 text-xs font-semibold text-herb mb-4">
+                <FileDown className="h-3.5 w-3.5" />
+                <span>Research Document</span>
+              </div>
+              <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4">
+                GIS-Based Natural Farming Model
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                RSAKHI Society has developed a natural farming model using GIS technology for farm-level monitoring, satellite-based observation, land-use change detection and assessment of farm-specific information including Khasra/plot numbers and cluster mapping.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="/documents/natural-farming-gis-model.pdf"
+                  download
+                  className="inline-flex items-center gap-2 rounded-xl bg-radiate px-5 py-3 text-xs font-semibold text-moss shadow-md hover:bg-gleam transition-colors"
+                >
+                  <FileDown className="h-4 w-4" />
+                  <span>Download PDF</span>
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                >
+                  <span>Request Information</span>
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-64 lg:h-80">
+              <img
+                src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789759415/Natural_Forming_kanpur.jpg.jpg"
+                alt="Natural farming GIS project"
+                className="w-full h-full object-cover rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GIS service catalogue and service cards */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">

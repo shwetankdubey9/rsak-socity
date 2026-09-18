@@ -27,22 +27,22 @@ export default function HomePage() {
   return (
     <div className="agri-page space-y-28 pb-24">
       {/* HERO SECTION */}
-      <section className="agri-hero overflow-hidden bg-moss pb-6 pt-14 text-pearl lg:pb-10 lg:pt-24">
+      <section className="agri-hero overflow-hidden bg-pearl pb-6 pt-14 text-moss lg:pb-10 lg:pt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-7 text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gleam/40 bg-herb/30 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.08em] text-gleam">
-                <span className="h-2 w-2 rounded-full bg-gleam animate-ping" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-herb/35 bg-gleam px-3.5 py-1.5 text-[11px] font-bold tracking-[0.08em] text-moss">
+                <span className="h-2 w-2 rounded-full bg-herb animate-ping" />
                 <span>Pioneering GIS Mapping & Soil Testing in Jhansi</span>
               </div>
 
-              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-pearl leading-[1.05]">
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-moss leading-[1.05]">
                 Remote Sensing & <br className="hidden sm:inline" />
-                <span className="text-gleam">Agricultural Intelligence</span>
+                <span className="text-herb">Agricultural Intelligence</span>
               </h1>
 
-              <p className="max-w-2xl text-base leading-8 text-pearl/80 sm:text-lg">
+              <p className="max-w-2xl text-base leading-8 text-moss/80 sm:text-lg">
                 <strong>Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society)</strong>, established in 2017 under Program Director <strong>Rakhi Shukla</strong> and Remote Sensing Lead <strong>Anil Kumar Shukla (RS&amp;GIS-(IIRS-ISRO))</strong>. Delivering high-precision 3D GIS mapping, soil, other type social work and watershed development across Bundelkhand, Uttar Pradesh, and India.
               </p>
 
@@ -56,25 +56,25 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-pearl/70 bg-transparent px-6 py-3.5 text-sm font-semibold text-pearl shadow-sm hover:border-gleam hover:bg-herb/30 transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-6 py-3.5 text-sm font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
                 >
-                  <MapPin className="h-4 w-4 text-gleam" />
+                  <MapPin className="h-4 w-4 text-herb" />
                   <span>Jhansi HQ Directions</span>
                 </Link>
               </div>
 
               {/* Badges Bar */}
-              <div className="grid grid-cols-3 gap-4 border-t border-herb/60 pt-6 text-xs font-medium text-pearl/70">
+              <div className="grid grid-cols-3 gap-4 border-t border-herb/30 pt-6 text-xs font-medium text-moss/70">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-gleam flex-shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-herb flex-shrink-0" />
                   <span>ISO 9001:2015</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-gleam flex-shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-herb flex-shrink-0" />
                   <span>37+ Completed Projects</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-gleam flex-shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-herb flex-shrink-0" />
                   <span>India-wide Services</span>
                 </div>
               </div>
@@ -191,52 +191,59 @@ export default function HomePage() {
 
       {/* LEADERSHIP SPOTLIGHT */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="agri-dark-panel rounded-3xl border border-slate-800 text-white p-8 lg:p-12">
+        <div className="premium-card rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Leadership Details */}
             <div className="lg:col-span-8 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-radiate/20 px-3 py-1 text-xs font-semibold text-gleam border border-herb/30">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gleam px-3 py-1 text-xs font-semibold text-moss border border-herb/30">
                 <span>Society Leadership</span>
               </div>
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-white">
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-moss">
                 Guided by Visionary Leadership & Technical Excellence
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                <div className="rounded-2xl bg-slate-900/90 border border-herb/30 p-5 space-y-3 relative overflow-hidden">
+                <div className="rounded-2xl bg-white border border-herb/30 p-5 space-y-3 relative overflow-hidden">
                   <div className="flex items-center gap-4">
                     <DirectorAvatar size="md" />
                     <div>
-                      <h3 className="font-bold text-lg text-gleam">Rakhi Devi</h3>
-                      <p className="text-xs text-slate-300 font-medium">Director</p>
-                      <span className="inline-block mt-1 rounded bg-radiate/20 px-2 py-0.5 text-[10px] font-semibold text-gleam border border-herb/30">
+                      <h3 className="font-bold text-lg text-moss">Rakhi Devi</h3>
+                      <p className="text-xs text-herb font-medium">Director</p>
+                      <span className="inline-block mt-1 rounded bg-radiate/20 px-2 py-0.5 text-[10px] font-semibold text-radiate border border-radiate/30">
                         Director
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-5 space-y-2">
-                  <h3 className="font-bold text-lg text-gleam">Anil Kumar Shukla</h3>
-                  <p className="text-xs text-slate-300 font-medium">Program Director & GIS Lead</p>
+                <div className="rounded-2xl bg-white border border-herb/30 p-5 space-y-2">
+                  <h3 className="font-bold text-lg text-moss">Anil Kumar Shukla</h3>
+                  <p className="text-xs text-herb font-medium">Program Director & GIS Lead</p>
                 </div>
               </div>
             </div>
 
             {/* NGO Registration & Contact Direct Callout */}
-            <div className="lg:col-span-4 rounded-2xl bg-slate-900 border border-slate-800 p-6 space-y-4 text-center">
-              <Compass className="h-12 w-12 text-gleam mx-auto" />
-              <h4 className="font-bold text-base text-white">Headquarters Contact</h4>
-              <p className="text-xs text-slate-400">
+            <div className="lg:col-span-4 rounded-2xl bg-gleam border border-herb/40 p-6 space-y-4 text-center">
+              <Compass className="h-12 w-12 text-herb mx-auto" />
+              <h4 className="font-bold text-base text-moss">Headquarters Contact</h4>
+              <p className="text-xs text-moss/75">
                 K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003
               </p>
-              <div className="pt-2">
+              <div className="pt-2 space-y-2">
                 <a
                   href="tel:+919415504335"
                   className="inline-flex items-center gap-2 rounded-xl bg-radiate px-4 py-2.5 text-xs font-semibold text-moss hover:bg-gleam transition w-full justify-center"
                 >
                   <Phone className="h-4 w-4" />
                   <span>Call 91-9415504335</span>
+                </a>
+                <a
+                  href="tel:+919307909728"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-4 py-2.5 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition w-full justify-center"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>Call 91-9307909728</span>
                 </a>
               </div>
             </div>
@@ -273,7 +280,14 @@ export default function HomePage() {
               {featuredProjects.map((p) => (
                 <tr key={p.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
                   <td className="p-4 font-mono font-bold text-herb">{p.sn}</td>
-                  <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">{p.name}</td>
+                  <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">
+                    {p.name}
+                    {p.pdfUrl && (
+                      <a href={p.pdfUrl} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex items-center gap-1 rounded bg-radiate/10 px-2 py-0.5 text-[10px] font-bold text-herb hover:bg-radiate hover:text-white transition">
+                        PDF
+                      </a>
+                    )}
+                  </td>
                   <td className="p-4 text-slate-600 dark:text-slate-400">{p.funder}</td>
                   <td className="p-4 font-mono text-slate-500">{p.period}</td>
                   <td className="p-4 text-slate-600 dark:text-slate-300">{p.beneficiary}</td>
@@ -324,6 +338,56 @@ export default function HomePage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* NATURAL FARMING SECTION */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="premium-card rounded-3xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="relative h-64 lg:h-auto">
+              <img
+                src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789759415/Natural_Forming_kanpur.jpg.jpg"
+                alt="Natural farming GIS project"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-radiate/10 px-3 py-1 text-xs font-semibold text-herb mb-4">
+                <Sprout className="h-3.5 w-3.5" />
+                <span>Natural Farming & GIS</span>
+              </div>
+              <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4">
+                GIS-Based Natural Farming Model
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                RSAKHI Society has developed a natural farming model using GIS technology for farm-level monitoring, satellite-based observation, land-use change detection and assessment of farm-specific information including Khasra/plot numbers and cluster mapping.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 rounded-xl bg-radiate px-5 py-3 text-xs font-semibold text-moss shadow-md hover:bg-gleam transition-colors"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                >
+                  <span>Contact Us</span>
+                </Link>
+                <a
+                  href="/documents/Natural_Farming_Model_Uttar_Pradesh.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                >
+                  <span>View PDF</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

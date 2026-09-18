@@ -99,8 +99,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white">Telephones</h3>
-                    <p className="text-slate-600 dark:text-slate-400 mt-0.5">
-                      <a href="tel:+919415504335" className="hover:text-herb">{siteConfig.phone}</a>
+                    <p className="text-slate-600 dark:text-slate-400 mt-0.5 space-y-0.5">
+                      <a href="tel:+919415504335" className="block hover:text-herb">{siteConfig.phone}</a>
+                      <a href="tel:+919307909728" className="block hover:text-herb">{siteConfig.phoneAlt}</a>
                     </p>
                   </div>
                 </div>
@@ -124,6 +125,7 @@ export default function ContactPage() {
                 <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Director:</strong> Rakhi Devi</p>
                 <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Secretary:</strong> Dr. Bhuvan Kumar Dixit</p>
                 <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Program Director &amp; GIS Lead:</strong> Anil Kumar Shukla</p>
+                <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Phone:</strong> <a href="tel:+919307909728" className="hover:text-herb">91-9307909728</a></p>
               </div>
 
               <a

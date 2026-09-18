@@ -204,7 +204,7 @@ export default function AdminGalleryPage() {
                 <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Category</label>
                 <select
                   value={formData.category}
-                  onChange={(e) => setFormData({ ...formData, category: e.target.value as any })}
+                  onChange={(e) => setFormData({ ...formData, category: e.target.value as GalleryItem["category"] })}
                   className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2 text-xs text-slate-900 dark:text-white"
                 >
                   <option value="GIS Elevation">GIS Elevation</option>

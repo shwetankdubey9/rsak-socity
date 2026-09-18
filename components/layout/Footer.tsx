@@ -5,14 +5,18 @@ import { siteConfig } from "@/lib/seo";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-herb/50 bg-moss text-pearl/80">
+    <footer className="w-full border-t border-herb/50 bg-herb text-pearl/80">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Col 1: NGO Summary */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-herb text-pearl">
-                <Compass className="h-5 w-5" />
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-herb p-0.5">
+                <img
+                  src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.12.jpg"
+                  alt="RSAKHI Society official logo"
+                  className="h-full w-full object-contain rounded-[10px]"
+                />
               </div>
               <div>
                 <h3 className="font-bold text-pearl text-base">RAKHI-Society</h3>
@@ -105,6 +109,10 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-gleam flex-shrink-0" />
                 <a href={`tel:${siteConfig.phone}`} className="hover:text-white">{siteConfig.phone}</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-gleam flex-shrink-0" />
+                <a href={`tel:${siteConfig.phoneAlt}`} className="hover:text-white">{siteConfig.phoneAlt}</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-herb flex-shrink-0" />

@@ -11,7 +11,7 @@ export const siteConfig = {
   address: "K.K. Puri Colony, Awas Vikas, Shivpuri Road, Jhansi (U.P.) 284003",
   registeredOffice: "",
   phone: "91-9415504335",
-  phoneAlt: "",
+  phoneAlt: "91-9307909728",
   email: "societyrakhi@gmail.com",
   emailAlt: "shuklaiirs@gmail.com",
   googleMapsUrl: "https://maps.app.goo.gl/qwfgucyRA9jyWygw7",

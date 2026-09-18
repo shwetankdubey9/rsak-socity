@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-herb/30 bg-pearl text-moss shadow-[0_2px_14px_rgba(30,48,6,0.10)] backdrop-blur-xl transition-colors">
       {/* Top Telemetry Notification Bar */}
-      <div className="hidden md:flex items-center justify-between border-b border-moss/80 bg-moss px-6 py-1.5 text-xs text-pearl/80">
+      <div className="hidden md:flex items-center justify-between border-b border-herb/80 bg-herb px-6 py-1.5 text-xs text-pearl/80">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
             <MapPin className="h-3.5 w-3.5 text-gleam" />
@@ -48,6 +48,13 @@ export default function Navbar() {
             <Phone className="h-3.5 w-3.5 text-gleam" />
             <span>Phone: 91-9415504335</span>
           </a>
+          <a
+            href="tel:+919307909728"
+            className="flex items-center gap-1.5 hover:text-gleam transition"
+          >
+            <Phone className="h-3.5 w-3.5 text-gleam" />
+            <span>Alt: 91-9307909728</span>
+          </a>
           <Link
             href="/admin"
             className="flex items-center gap-1 text-slate-400 hover:text-white transition font-medium"
@@ -62,18 +69,19 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6">
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-herb p-0.5 shadow-sm group-hover:bg-moss transition-colors">
-            <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-pearl">
-              <Compass className="h-5 w-5 text-herb group-hover:rotate-45 transition-transform duration-500" />
-            </div>
+          <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-herb p-0.5 shadow-sm group-hover:bg-moss transition-colors">
+            <img
+              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.12.jpg"
+              alt="RSAKHI Society official logo"
+              className="h-full w-full object-contain rounded-[10px]"
+            />
           </div>
-          <div>
-            <span className="font-bold text-base sm:text-lg tracking-tight text-moss">
-              RAKHI-Society
-            </span>
-            <span className="block text-[10px] font-medium text-herb tracking-wide uppercase">
-              Remote Sensing & GIS • Jhansi
-            </span>
+          <div className="flex items-center gap-2">
+            <img
+              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.10.jpg"
+              alt="RSAKHI Society rectangular branding"
+              className="h-8 w-auto object-contain"
+            />
           </div>
         </Link>
 
