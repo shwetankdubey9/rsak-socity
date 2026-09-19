@@ -108,28 +108,28 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2">
             <h3 className="font-bold text-base text-herb">Project Management Committee</h3>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
               Oversees vital aspects of project setup, regional and district level coordination, thematic team management, and strategic policy decisions.
             </p>
           </div>
 
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2">
             <h3 className="font-bold text-base text-radiate">Procurement & Purchase Committee</h3>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
               Handles center needs assessment, market surveys, quotation invites, purchase orders, and AMC finalizations with multi-member approvals.
             </p>
           </div>
 
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2">
             <h3 className="font-bold text-base text-herb">Financial Advisory Committee</h3>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
               Addresses HR development, personal matters, infrastructure maintenance, financial accounting, and auditing standards.
             </p>
           </div>
 
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 space-y-2">
             <h3 className="font-bold text-base text-amber-500">Gender Mainstreaming Committee</h3>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
               Maintains gender-sensitive workplace standards, organizes sensitization workshops, and handles workplace compliance.
             </p>
           </div>
@@ -148,9 +148,10 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
             <img
-              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.16.jpg"
-              alt="RSAKHI Society additional branding"
+              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789838393/ChatGPT_Image_Sep_19_2026_10_49_07_PM.png"
+              alt="RSAKHI Society organization branding"
               className="w-full h-auto object-contain rounded-lg"
+              loading="lazy"
             />
           </div>
 
@@ -159,10 +160,12 @@ export default function AboutPage() {
               src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757883/WhatsApp_Image_2026-09-19_at_00.26.13.jpg"
               alt="RSAKHI Society additional branding"
               className="w-full h-auto object-contain rounded-lg"
+              loading="lazy"
             />
           </div>
         </div>
       </section>
+
 
       {/* Equipment & Infrastructure */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">

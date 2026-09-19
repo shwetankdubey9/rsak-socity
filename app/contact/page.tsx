@@ -121,7 +121,7 @@ export default function ContactPage() {
               </div>
 
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
-                <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Leadership Contacts:</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400 font-semibold uppercase tracking-wider">Leadership Contacts:</p>
                 <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Director:</strong> Rakhi Devi</p>
                 <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Secretary:</strong> Dr. Bhuvan Kumar Dixit</p>
                 <p className="text-xs text-slate-600 dark:text-slate-300"><strong>Program Director &amp; GIS Lead:</strong> Anil Kumar Shukla</p>
@@ -132,11 +132,11 @@ export default function ContactPage() {
                 href={siteConfig.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 px-4 py-3 text-xs font-semibold hover:bg-slate-800 transition"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-herb text-white dark:bg-herb border border-herb px-4 py-3 text-sm font-semibold hover:bg-moss transition"
               >
-                <MapPin className="h-4 w-4 text-red-500" />
+                <MapPin className="h-4 w-4 text-gleam" />
                 <span>Open Google Maps Link</span>
-                <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
+                <ExternalLink className="h-3.5 w-3.5 text-white/70" />
               </a>
 
               <div className="border-t border-slate-100 pt-4 dark:border-slate-800">
@@ -179,7 +179,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <label className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                       Full Name *
                     </label>
                     <input
@@ -193,7 +193,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <label className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                       Email Address *
                     </label>
                     <input
@@ -209,7 +209,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <label className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                       Phone / Mobile
                     </label>
                     <input
@@ -222,7 +222,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <label className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                       Subject Interest
                     </label>
                     <select
@@ -236,7 +236,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  <label className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                     Message Details *
                   </label>
                   <textarea

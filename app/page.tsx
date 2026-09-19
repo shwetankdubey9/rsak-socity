@@ -162,7 +162,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-herb transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                   {service.shortDesc}
                 </p>
                 <ul className="space-y-1.5 text-xs text-slate-500 dark:text-slate-400">
@@ -327,7 +327,7 @@ export default function HomePage() {
                     {blog.title}
                   </Link>
                 </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+                <p className="text-sm text-slate-700 dark:text-slate-300 line-clamp-3 leading-relaxed">
                   {blog.excerpt}
                 </p>
               </div>
@@ -360,7 +360,7 @@ export default function HomePage() {
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4">
                 GIS-Based Natural Farming Model
               </h2>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                 RSAKHI Society has developed a natural farming model using GIS technology for farm-level monitoring, satellite-based observation, land-use change detection and assessment of farm-specific information including Khasra/plot numbers and cluster mapping.
               </p>
               <div className="flex flex-wrap gap-3">
