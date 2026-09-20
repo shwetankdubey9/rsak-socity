@@ -72,7 +72,7 @@ export default function BlogPage() {
               className={`px-3 py-1.5 rounded-xl text-xs font-medium transition ${
                 activeTag === t
                   ? "bg-radiate text-white shadow-sm"
-                  : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200"
+                  : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 dark:hover:text-white"
               }`}
             >
               #{t}

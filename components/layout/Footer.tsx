@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, ExternalLink, ShieldCheck, Award } from "lucide-re
 import { siteConfig } from "@/lib/seo";
 
 // Official logo URL
-const LOGO_URL = "https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.12.jpg";
+const LOGO_URL = "https://res.cloudinary.com/sb6zkuxk/image/upload/v1789838393/ChatGPT_Image_Sep_19_2026_10_49_22_PM.png";
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
                 <img
                   src={LOGO_URL}
                   alt="RSAKHI Society official logo"
-                  className="h-11 w-11 object-contain"
+                  className="h-full w-full object-cover object-center"
                   loading="lazy"
                 />
               </div>
@@ -45,22 +45,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-pearl/80">
               <li>
-                <Link href="/" className="hover:text-white transition">Home Overview</Link>
+                <Link href="/" className="hover:text-white dark:hover:text-gleam transition">Home Overview</Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition">About Society &amp; Committees</Link>
+                <Link href="/about" className="hover:text-white dark:hover:text-gleam transition">About Society &amp; Committees</Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition">GIS &amp; Agricultural Services</Link>
+                <Link href="/services" className="hover:text-white dark:hover:text-gleam transition">GIS &amp; Agricultural Services</Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:text-white transition">Majith DEM &amp; GIS Gallery</Link>
+                <Link href="/gallery" className="hover:text-white dark:hover:text-gleam transition">Majith DEM &amp; GIS Gallery</Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-white transition">Research &amp; Project Reports</Link>
+                <Link href="/blog" className="hover:text-white dark:hover:text-gleam transition">Research &amp; Project Reports</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition">Contact Us &amp; Feedback</Link>
+                <Link href="/contact" className="hover:text-white dark:hover:text-gleam transition">Contact Us &amp; Feedback</Link>
               </li>
               <li>
                 <Link href="/admin" className="text-gleam hover:underline flex items-center gap-1 font-medium mt-2">
@@ -89,7 +89,7 @@ export default function Footer() {
                 <span>NITI Aayog DARPAN Portal</span>
               </li>
               <li className="flex items-center gap-2">
-                <Award className="h-4 w-4 text-pearl/60 flex-shrink-0" />
+                <Award className="h-4 w-4 text-pearl/60 dark:text-pearl/85 flex-shrink-0" />
                 <span>MSME (Udyam Registration)</span>
               </li>
               <li className="flex items-center gap-2">
@@ -166,13 +166,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-12 border-t border-pearl/10 pt-6 text-center text-sm text-pearl/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 border-t border-pearl/10 dark:border-pearl/20 pt-6 text-center text-sm text-pearl/50 dark:text-pearl/80 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>&copy; {new Date().getFullYear()} Remote Sensing Agriculture Knowledge Help Integral Society. All rights reserved.</p>
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-radiate/10 px-3.5 py-1 text-sm font-bold text-gleam border border-herb/30 shadow-sm">
-              ✨ Project made by Shwetank Dubey
+              ✨ Project made by{" "}
+              <a
+                href="https://shwetank-portfolio-swart.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Shwetank Dubey's portfolio"
+                className="underline-offset-2 transition-colors duration-200 hover:text-radiate hover:underline focus-visible:text-radiate"
+              >
+                Shwetank Dubey
+              </a>
             </span>
-            <p className="text-xs text-pearl/40">
+            <p className="text-xs text-pearl/40 dark:text-pearl/70">
               Next.js &bull; Jhansi, UP
             </p>
           </div>

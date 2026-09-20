@@ -145,20 +145,11 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+        <div className="grid grid-cols-1 gap-6 max-w-3xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 dark:border-[#33402F] bg-white dark:bg-[#111811] p-6 shadow-sm">
             <img
               src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789838393/ChatGPT_Image_Sep_19_2026_10_49_07_PM.png"
               alt="RSAKHI Society organization branding"
-              className="w-full h-auto object-contain rounded-lg"
-              loading="lazy"
-            />
-          </div>
-
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
-            <img
-              src="https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757883/WhatsApp_Image_2026-09-19_at_00.26.13.jpg"
-              alt="RSAKHI Society additional branding"
               className="w-full h-auto object-contain rounded-lg"
               loading="lazy"
             />

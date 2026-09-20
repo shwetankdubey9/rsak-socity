@@ -181,7 +181,7 @@ export default function ServicesPage() {
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition dark:bg-transparent dark:text-white dark:border-[#34422F] dark:hover:bg-herb/20 dark:hover:border-herb"
                 >
                   <span>Request Information</span>
                 </Link>

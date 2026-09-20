@@ -165,7 +165,7 @@ export default function MajithDEMVisualizer() {
               onClick={() => setColorPalette("terrain")}
               className={`px-2 py-1 rounded text-xs transition ${
                 colorPalette === "terrain"
-                  ? "bg-herb text-pearl font-medium"
+                  ? "bg-herb text-pearl font-medium dark:bg-[#557031]"
                   : "text-slate-400 hover:text-white"
               }`}
             >

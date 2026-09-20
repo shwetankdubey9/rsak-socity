@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark mode follows the .dark class set by next-themes (not the OS media query) */
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   /* Official RAKHI-Society palette */
   --color-herb: #6A8042;
@@ -67,6 +70,7 @@
 
 @layer base {
   :root {
+    color-scheme: light;
     --color-herb: #6A8042;
     --color-gleam: #FFE787;
     --color-pearl: #FFFADD;
@@ -83,14 +87,30 @@
   }
 
   .dark {
-    --background: #2a3618;
-    --foreground: #FFFADD;
-    --card: #3a4a22;
-    --card-foreground: #FFFADD;
+    color-scheme: dark;
+    --background: #0B0F0A;
+    --foreground: #FFFFFF;
+    --card: #151D13;
+    --card-foreground: #FFFFFF;
     --primary: #FFE787;
     --primary-foreground: #1E3006;
     --accent: #ED7A13;
-    --border: rgba(255, 250, 221, 0.18);
+    --border: #34422F;
+    /* Brighter brand green so text-herb stays readable on dark surfaces */
+    --color-herb: #8FAE5B;
+    /* Slate remap: 50–100 become dark surfaces, 200–700 become readable text,
+       800–950 stay dark surfaces/borders */
+    --color-slate-50: #151D13;
+    --color-slate-100: #1A2417;
+    --color-slate-200: #D6DCD1;
+    --color-slate-300: #E7ECE3;
+    --color-slate-400: #B8C2B2;
+    --color-slate-500: #A9B5A2;
+    --color-slate-600: #C4CCC0;
+    --color-slate-700: #DDE3D8;
+    --color-slate-800: #33402F;
+    --color-slate-900: #111811;
+    --color-slate-950: #0B0F0A;
   }
 
   /* Base typography */
@@ -153,6 +173,18 @@ body {
     var(--background);
 }
 
+/* Dark mode: layered satellite-intelligence ambience + subtle coordinate grid */
+.dark .agri-page {
+  background:
+    radial-gradient(circle at 88% 0%, rgba(106, 128, 66, 0.16), transparent 30rem),
+    radial-gradient(circle at 0% 32%, rgba(255, 231, 135, 0.05), transparent 26rem),
+    radial-gradient(circle at 60% 100%, rgba(106, 128, 66, 0.08), transparent 34rem),
+    linear-gradient(rgba(143, 174, 91, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 174, 91, 0.045) 1px, transparent 1px),
+    var(--background);
+  background-size: auto, auto, auto, 4rem 4rem, 4rem 4rem, auto;
+}
+
 .agri-hero {
   position: relative;
   isolation: isolate;
@@ -186,6 +218,21 @@ body {
   transform: rotate(-5deg);
 }
 
+/* Dark hero: faint topographic contour rings + one controlled radial glow */
+.dark .agri-hero {
+  background-image:
+    radial-gradient(circle at 80% 35%, rgba(106, 128, 66, 0.16), transparent 42%),
+    repeating-radial-gradient(circle at 80% 35%, transparent 0 42px, rgba(143, 174, 91, 0.05) 42px 43px);
+}
+
+.dark .agri-hero::before {
+  background: rgba(143, 174, 91, 0.10);
+}
+
+.dark .agri-hero::after {
+  border-color: rgba(143, 174, 91, 0.22);
+}
+
 /* Premium card — improved contrast for dark mode */
 .premium-card {
   border: 1px solid rgba(106, 128, 66, 0.25);
@@ -201,9 +248,17 @@ body {
 }
 
 .dark .premium-card {
-  background: #3a4a22;
-  border-color: rgba(255, 250, 221, 0.18);
-  color: #FFFADD;
+  background: #151D13;
+  border-color: #34422F;
+  color: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dark .premium-card:hover {
+  border-color: #8FAE5B;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(106, 128, 66, 0.18);
 }
 
 /* Stats bar */
@@ -230,6 +285,29 @@ body {
   overflow: hidden;
   background: #6A8042;
   box-shadow: 0 18px 48px rgba(30, 48, 6, 0.22);
+}
+
+/* Dark mode: deep terrain panel instead of bright green */
+.dark .agri-stat-section {
+  background: linear-gradient(135deg, #1A2417 0%, #10160F 100%);
+  border-block: 1px solid #34422F;
+}
+
+.dark .agri-stat-section::before {
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(143, 174, 91, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 174, 91, 0.10) 1px, transparent 1px);
+}
+
+.dark .agri-dark-panel {
+  background: linear-gradient(135deg, #1A2417 0%, #10160F 100%);
+  border: 1px solid #34422F;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+}
+
+.dark .agri-dark-panel::after {
+  background: rgba(106, 128, 66, 0.20);
 }
 
 .agri-dark-panel::after {
@@ -272,13 +350,18 @@ body {
 }
 
 .dark .glass-panel {
-  background: rgba(58, 74, 34, 0.92);
-  border: 1px solid rgba(255, 250, 221, 0.18);
+  background: rgba(21, 29, 19, 0.92);
+  border: 1px solid #34422F;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* Brand text treatments */
 .majith-gradient-text {
   color: #6A8042;
+}
+
+.dark .majith-gradient-text {
+  color: #FFE787;
 }
 
 .majith-gradient-bg {
@@ -292,9 +375,9 @@ body {
 }
 
 .dark .corporate-panel {
-  background: #3a4a22;
-  border-color: rgba(255, 250, 221, 0.18);
-  color: #FFFADD;
+  background: #151D13;
+  border-color: #34422F;
+  color: #FFFFFF;
 }
 
 .majith-border-glow {
@@ -407,4 +490,82 @@ label {
   .overflow-x-auto {
     -webkit-overflow-scrolling: touch;
   }
+}
+
+/* ─────────────── Dark mode refinements ─────────────── */
+
+/* Forms: dark surface, readable text, gleam focus */
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="submit"]):not([type="button"]),
+.dark select,
+.dark textarea {
+  background-color: #151D13;
+  border-color: #475569;
+  color: #FFFFFF;
+}
+
+.dark select option {
+  background-color: #151D13;
+  color: #FFFFFF;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #B8C2B2;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #FFE787;
+  box-shadow: 0 0 0 3px rgba(255, 231, 135, 0.16);
+}
+
+.dark :focus-visible {
+  outline-color: #FFE787;
+}
+
+/* Code / technical data blocks */
+.dark pre {
+  background: #111827;
+  color: #F9FAFB;
+  border: 1px solid #34422F;
+  border-radius: 0.75rem;
+}
+
+.dark pre code {
+  background: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
+
+.dark :not(pre) > code {
+  background: #1A2417;
+  color: #FFE787;
+  border: 1px solid #34422F;
+  border-radius: 0.375rem;
+  padding: 0.1em 0.35em;
+  font-size: 0.875em;
+}
+
+/* Footer: subtle coordinate-grid over the deep moss surface */
+.dark footer {
+  background-image:
+    linear-gradient(rgba(143, 174, 91, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 174, 91, 0.05) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+/* Scrollbar + selection tuned for dark surfaces */
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(143, 174, 91, 0.35);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(143, 174, 91, 0.6);
+}
+
+.dark ::selection {
+  background: rgba(255, 231, 135, 0.28);
+  color: #FFFFFF;
 }

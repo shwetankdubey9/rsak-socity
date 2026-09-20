@@ -30,7 +30,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col bg-pearl dark:bg-herb text-moss dark:text-pearl transition-colors">
+      <body className="font-sans antialiased min-h-screen flex flex-col bg-pearl dark:bg-[#0B0F0A] text-moss dark:text-pearl transition-colors">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <Navbar />
           <main className="flex-1">{children}</main>

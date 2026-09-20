@@ -132,7 +132,7 @@ export default function ContactPage() {
                 href={siteConfig.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-herb text-white dark:bg-herb border border-herb px-4 py-3 text-sm font-semibold hover:bg-moss transition"
+                className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-herb text-white dark:bg-[#557031] border border-herb px-4 py-3 text-sm font-semibold hover:bg-moss dark:hover:bg-[#6A8042] transition"
               >
                 <MapPin className="h-4 w-4 text-gleam" />
                 <span>Open Google Maps Link</span>

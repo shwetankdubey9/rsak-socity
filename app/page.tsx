@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <div className="agri-page space-y-28 pb-24">
       {/* HERO SECTION */}
-      <section className="agri-hero overflow-hidden bg-pearl pb-6 pt-14 text-moss lg:pb-10 lg:pt-24">
+      <section className="agri-hero overflow-hidden bg-pearl pb-6 pt-14 text-moss dark:bg-[#0B0F0A] dark:text-pearl lg:pb-10 lg:pt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             {/* Left Content */}
@@ -37,12 +37,12 @@ export default function HomePage() {
                 <span>Pioneering GIS Mapping & Soil Testing in Jhansi</span>
               </div>
 
-              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-moss leading-[1.05]">
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl text-moss dark:text-white leading-[1.05]">
                 Remote Sensing & <br className="hidden sm:inline" />
-                <span className="text-herb">Agricultural Intelligence</span>
+                <span className="text-herb dark:text-gleam">Agricultural Intelligence</span>
               </h1>
 
-              <p className="max-w-2xl text-base leading-8 text-moss/80 sm:text-lg">
+              <p className="max-w-2xl text-base leading-8 text-moss/80 dark:text-slate-300 sm:text-lg">
                 <strong>Remote Sensing Agriculture Knowledge Help Integral Society (RAKHI-Society)</strong>, established in 2017 under Program Director <strong>Rakhi Shukla</strong> and Remote Sensing Lead <strong>Anil Kumar Shukla (RS&amp;GIS-(IIRS-ISRO))</strong>. Delivering high-precision 3D GIS mapping, soil, other type social work and watershed development across Bundelkhand, Uttar Pradesh, and India.
               </p>
 
@@ -56,7 +56,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-6 py-3.5 text-sm font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-6 py-3.5 text-sm font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition dark:bg-transparent dark:text-white dark:border-[#34422F] dark:hover:bg-herb/20 dark:hover:border-herb"
                 >
                   <MapPin className="h-4 w-4 text-herb" />
                   <span>Jhansi HQ Directions</span>
@@ -64,7 +64,7 @@ export default function HomePage() {
               </div>
 
               {/* Badges Bar */}
-              <div className="grid grid-cols-3 gap-4 border-t border-herb/30 pt-6 text-xs font-medium text-moss/70">
+              <div className="grid grid-cols-3 gap-4 border-t border-herb/30 pt-6 text-xs font-medium text-moss/70 dark:text-slate-400 dark:border-[#34422F]">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-herb flex-shrink-0" />
                   <span>ISO 9001:2015</span>
@@ -82,7 +82,7 @@ export default function HomePage() {
 
             {/* Right Hero Visualizer: Interactive Majith DEM */}
             <div className="relative lg:col-span-5 lg:pl-4">
-              <div className="absolute -right-3 -top-3 hidden rounded-xl border border-herb bg-pearl px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-herb shadow-sm md:block">Live spatial view</div>
+              <div className="absolute -right-3 -top-3 hidden rounded-xl border border-herb bg-pearl px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-herb shadow-sm md:block dark:bg-[#151D13] dark:border-[#34422F] dark:text-gleam">Live spatial view</div>
               <MajithDEMVisualizer />
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 rounded-full bg-gleam px-3 py-1 text-xs font-semibold text-moss border border-herb/30">
                 <span>Society Leadership</span>
               </div>
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-moss">
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-moss dark:text-white">
                 Guided by Visionary Leadership & Technical Excellence
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                <div className="rounded-2xl bg-white border border-herb/30 p-5 space-y-3 relative overflow-hidden">
+                <div className="rounded-2xl bg-white border border-herb/30 p-5 space-y-3 relative overflow-hidden dark:bg-[#1A2417] dark:border-[#34422F]">
                   <div className="flex items-center gap-4">
                     <DirectorAvatar size="md" />
                     <div>
-                      <h3 className="font-bold text-lg text-moss">Rakhi Devi</h3>
+                      <h3 className="font-bold text-lg text-moss dark:text-white">Rakhi Devi</h3>
                       <p className="text-xs text-herb font-medium">Director</p>
                       <span className="inline-block mt-1 rounded bg-radiate/20 px-2 py-0.5 text-[10px] font-semibold text-radiate border border-radiate/30">
                         Director
@@ -216,8 +216,8 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl bg-white border border-herb/30 p-5 space-y-2">
-                  <h3 className="font-bold text-lg text-moss">Anil Kumar Shukla</h3>
+                <div className="rounded-2xl bg-white border border-herb/30 p-5 space-y-2 dark:bg-[#1A2417] dark:border-[#34422F]">
+                  <h3 className="font-bold text-lg text-moss dark:text-white">Anil Kumar Shukla</h3>
                   <p className="text-xs text-herb font-medium">Program Director & GIS Lead</p>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function HomePage() {
                 </a>
                 <a
                   href="tel:+919307909728"
-                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-4 py-2.5 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition w-full justify-center"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-4 py-2.5 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition w-full justify-center dark:bg-transparent dark:text-white dark:border-[#34422F] dark:hover:bg-herb/20"
                 >
                   <Phone className="h-4 w-4" />
                   <span>Call 91-9307909728</span>
@@ -332,7 +332,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="p-6 pt-0 flex items-center justify-between text-[11px] text-slate-500 border-t border-slate-100 dark:border-slate-800 mt-4">
+              <div className="p-6 pt-0 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-4">
                 <span>By {blog.author}</span>
                 <span>{blog.readTime}</span>
               </div>
@@ -373,7 +373,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition dark:bg-transparent dark:text-white dark:border-[#34422F] dark:hover:bg-herb/20 dark:hover:border-herb"
                 >
                   <span>Contact Us</span>
                 </Link>
@@ -381,7 +381,7 @@ export default function HomePage() {
                   href="/documents/Natural_Farming_Model_Uttar_Pradesh.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-herb/60 bg-white px-5 py-3 text-xs font-semibold text-moss shadow-sm hover:border-herb hover:bg-gleam transition dark:bg-transparent dark:text-white dark:border-[#34422F] dark:hover:bg-herb/20 dark:hover:border-herb"
                 >
                   <span>View PDF</span>
                 </a>
@@ -393,7 +393,7 @@ export default function HomePage() {
 
       {/* CTA BANNER */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-herb p-8 text-center text-pearl shadow-xl sm:p-12 space-y-6">
+        <div className="rounded-3xl bg-herb p-8 text-center text-pearl shadow-xl sm:p-12 space-y-6 dark:bg-[#1E3006] dark:border dark:border-[#34422F]">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Need Expert GIS Mapping or Soil Testing in Jhansi?
           </h2>
