@@ -14,11 +14,11 @@ export default function Footer() {
           {/* Col 1: NGO Summary */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white/10 border border-pearl/20 overflow-hidden">
+              <div className="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/10 border border-pearl/20 overflow-hidden">
                 <img
                   src={LOGO_URL}
                   alt="RSAKHI Society official logo"
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center rounded-full"
                   loading="lazy"
                 />
               </div>

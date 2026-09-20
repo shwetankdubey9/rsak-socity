@@ -71,7 +71,7 @@ export default function AboutPage() {
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               {initialCommitteeMembers.map((member) => (
                 <tr key={member.sn} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
-                  <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">{member.name}</td>
+                  <td className="p-4 font-semibold text-slate-900 dark:text-white">{member.name}</td>
                   <td className="p-4 text-slate-900 dark:text-slate-200 font-medium">{member.designation}</td>
                 </tr>
               ))}
@@ -227,7 +227,7 @@ export default function AboutPage() {
               {initialProjects.map((p) => (
                 <tr key={p.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                   <td className="p-4 font-mono font-bold text-herb">{p.sn}</td>
-                  <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">
+                  <td className="p-4 font-semibold text-slate-900 dark:text-white">
                     {p.name}
                     {p.pdfUrl && (
                       <a href={p.pdfUrl} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex items-center gap-1 rounded bg-radiate/10 px-2 py-0.5 text-[10px] font-bold text-herb hover:bg-radiate hover:text-white transition">

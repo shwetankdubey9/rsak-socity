@@ -106,7 +106,7 @@ export default function AdminProjectsPage() {
             {projects.map((p) => (
               <tr key={p.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                 <td className="p-4 font-mono font-bold text-herb">{p.sn}</td>
-                <td className="p-4 font-semibold text-slate-900 dark:text-slate-100">{p.name}</td>
+                <td className="p-4 font-semibold text-slate-900 dark:text-white">{p.name}</td>
                 <td className="p-4 text-slate-600 dark:text-slate-400">{p.funder}</td>
                 <td className="p-4 font-mono text-slate-500">{p.period}</td>
                 <td className="p-4 text-slate-600 dark:text-slate-300">{p.beneficiary}</td>

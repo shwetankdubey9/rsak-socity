@@ -8,7 +8,6 @@ import ThemeToggle from "../ui/ThemeToggle";
 
 // Official logo URLs
 const LOGO_URL = "https://res.cloudinary.com/sb6zkuxk/image/upload/v1789838393/ChatGPT_Image_Sep_19_2026_10_49_22_PM.png";
-const WORDMARK_URL = "https://res.cloudinary.com/sb6zkuxk/image/upload/v1789757884/WhatsApp_Image_2026-09-19_at_00.26.10.jpg";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -71,24 +70,17 @@ export default function Navbar() {
 
       {/* Main Navigation Bar */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        {/* Brand: Logo + Wordmark */}
+        {/* Brand: Logo */}
         <Link href="/" className="flex items-center gap-2.5 group min-w-0 flex-shrink-0" aria-label="RSAKHI Society Home">
           {/* Logo circle */}
-          <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-white dark:bg-white/10 border border-herb/30 dark:border-white/20 shadow-sm overflow-hidden">
+          <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white dark:bg-white/10 border border-herb/30 dark:border-white/20 shadow-sm overflow-hidden">
             <img
               src={LOGO_URL}
               alt="RSAKHI Society official logo"
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center rounded-full"
               loading="eager"
             />
           </div>
-          {/* Wordmark — hidden on very small screens, visible from sm up */}
-          <img
-            src={WORDMARK_URL}
-            alt="RSAKHI Society wordmark"
-            className="hidden sm:block h-9 w-auto max-w-[140px] md:max-w-[180px] object-contain dark:brightness-110"
-            loading="eager"
-          />
         </Link>
 
         {/* Desktop Nav Links */}
