@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
         return;
       }
 
-      // Retained temporarily for the existing route middleware; Supabase owns the real session.
+      // Retained for the /admin route proxy; Supabase owns the real session.
       document.cookie = `rsak_admin_session=true; path=/; max-age=${60 * 60 * 24 * 7}`;
       router.push("/admin");
       router.refresh();

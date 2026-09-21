@@ -6,8 +6,18 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, phone, subject, message } = body;
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    const limits: Array<[unknown, number]> = [
+      [name, 100],
+      [email, 254],
+      [phone, 30],
+      [subject, 200],
+      [message, 5000],
+    ];
+    const badLength = limits.some(([v, max]) => typeof v === "string" && v.length > max);
+    const validEmail = typeof email === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !email || !message || badLength || !validEmail) {
+      return NextResponse.json({ error: "Missing or invalid required fields" }, { status: 400 });
     }
 
     const supabase = await createServerSupabaseClient();

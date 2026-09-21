@@ -5,7 +5,7 @@ import { initialBlogs } from "@/lib/data/seedData";
 import { blogFromRow } from "@/lib/blogs";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
 import { constructMetadata } from "@/lib/seo";
-import { Calendar, Clock, User, ArrowLeft, Compass, Tag } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
 import ShareButton from "@/components/blog/ShareButton";
 import MarkdownBody from "@/components/blog/MarkdownBody";
 
@@ -99,14 +99,12 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
         </div>
 
         {/* Article Body */}
-        <div className="prose prose-slate dark:prose-invert max-w-none text-sm leading-relaxed space-y-4">
+        <div className="max-w-none space-y-4">
           <p className="text-base font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-900/80 p-4 rounded-2xl border-l-4 border-herb">
             {blog.excerpt}
           </p>
 
-          <div className="whitespace-normal">
-            <MarkdownBody content={blog.content} />
-          </div>
+          <MarkdownBody content={blog.content} />
         </div>
 
         {/* Tags Footer */}
