@@ -10,12 +10,34 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    subject: "GIS Mapping Inquiry",
+    subject: subjectInterests[0],
     message: "",
   });
 
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [gmailFallbackUrl, setGmailFallbackUrl] = useState("");
+
+  const buildGmailComposeUrl = (data: typeof formData) => {
+    const body = [
+      `Name: ${data.name}`,
+      `Visitor Email: ${data.email}`,
+      `Phone / Mobile: ${data.phone || "-"}`,
+      `Subject Interest: ${data.subject}`,
+      "",
+      "Message:",
+      data.message,
+    ].join("\n");
+
+    const params = new URLSearchParams({
+      view: "cm",
+      fs: "1",
+      to: siteConfig.email,
+      su: data.subject,
+      body,
+    });
+    return `https://mail.google.com/mail/?${params.toString()}`;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,6 +48,11 @@ export default function ContactPage() {
     }
 
     setStatus("submitting");
+    setGmailFallbackUrl("");
+
+    // Opened during the click gesture so popup blockers allow it; navigated only after DB success.
+    const gmailTab = window.open("", "_blank");
+    const submittedData = { ...formData };
 
     try {
       const res = await fetch("/api/contact", {
@@ -34,16 +61,23 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", phone: "", subject: "GIS Mapping Inquiry", message: "" });
-      } else {
+      if (!res.ok) {
         throw new Error("Failed to send message");
       }
-    } catch {
-      // Fallback local success indicator
+
+      const composeUrl = buildGmailComposeUrl(submittedData);
+      if (gmailTab) {
+        gmailTab.location.href = composeUrl;
+      } else {
+        setGmailFallbackUrl(composeUrl);
+      }
+
       setStatus("success");
-      setFormData({ name: "", email: "", phone: "", subject: "GIS Mapping Inquiry", message: "" });
+      setFormData({ name: "", email: "", phone: "", subject: subjectInterests[0], message: "" });
+    } catch {
+      gmailTab?.close();
+      setErrorMsg("Failed to send message. Please try again.");
+      setStatus("error");
     }
   };
 
@@ -163,9 +197,25 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">Send Us a Direct Message</h2>
 
               {status === "success" && (
-                <div className="flex items-center gap-3 rounded-2xl bg-herb/10 border border-herb/30 p-4 text-herb dark:text-herb text-xs font-medium">
-                  <CheckCircle2 className="h-5 w-5 flex-shrink-0" />
-                  <span>Thank you! Your message has been transmitted successfully. Our Jhansi office team will respond shortly.</span>
+                <div className="flex items-start gap-3 rounded-2xl bg-herb/10 border border-herb/30 p-4 text-herb dark:text-herb text-xs font-medium">
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                  <div className="space-y-2">
+                    <span>Thank you! Your message has been transmitted successfully. Our Jhansi office team will respond shortly.</span>
+                    {gmailFallbackUrl && (
+                      <p>
+                        Message saved successfully.{" "}
+                        <a
+                          href={gmailFallbackUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 font-bold underline underline-offset-2 hover:text-moss dark:hover:text-gleam"
+                        >
+                          Click here to open Gmail.
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      </p>
+                    )}
+                  </div>
                 </div>
               )}
 
